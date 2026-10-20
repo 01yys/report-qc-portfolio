@@ -1,0 +1,3215 @@
+{
+  "total": 36,
+  "scored": 34,
+  "unscored": 2,
+  "matched": 34,
+  "mismatched": 0,
+  "groups": {
+    "laterality": {
+      "total": 12,
+      "scored": 11,
+      "unscored": 1,
+      "matched": 11,
+      "mismatched": 0,
+      "expected_positive_cases": 3,
+      "missed_positive_cases": 0,
+      "expected_no_issue_cases": 8,
+      "unexpected_positive_cases": 0,
+      "comparable_case_count": 4,
+      "actual_states": {
+        "needs_review": 3,
+        "pass": 1,
+        "unable_to_check": 8
+      }
+    },
+    "measurement": {
+      "total": 12,
+      "scored": 12,
+      "unscored": 0,
+      "matched": 12,
+      "mismatched": 0,
+      "expected_positive_cases": 2,
+      "missed_positive_cases": 0,
+      "expected_no_issue_cases": 10,
+      "unexpected_positive_cases": 0,
+      "comparable_case_count": 5,
+      "actual_states": {
+        "needs_review": 2,
+        "pass": 3,
+        "unable_to_check": 7
+      }
+    },
+    "assertion": {
+      "total": 12,
+      "scored": 11,
+      "unscored": 1,
+      "matched": 11,
+      "mismatched": 0,
+      "expected_positive_cases": 3,
+      "missed_positive_cases": 0,
+      "expected_no_issue_cases": 8,
+      "unexpected_positive_cases": 0,
+      "comparable_case_count": 6,
+      "actual_states": {
+        "needs_review": 3,
+        "pass": 3,
+        "unable_to_check": 6
+      }
+    }
+  },
+  "records": [
+    {
+      "id": "L-01",
+      "module": "laterality",
+      "group": "明确冲突",
+      "findings_text": "左肺上叶见6mm结节。",
+      "impression_text": "右肺上叶见6mm结节。",
+      "expected_statuses": [
+        "needs_review"
+      ],
+      "expected_issue_count": 1,
+      "label_reason": "同一肺叶单对象，明确左右相反。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "bf88df5a-9591-45d9-be4e-f7f0f53f8d72",
+        "checked_at": "2026-10-18T12:44:17.771365+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "needs_review",
+        "summary": "发现 1 条需人工核对项。",
+        "issues": [
+          {
+            "module": "laterality",
+            "source": "rule",
+            "review_state": "unreviewed",
+            "type": "laterality_inconsistency",
+            "title": "左右位置不一致",
+            "findings_evidence": "左肺上叶见6mm结节",
+            "impression_evidence": "右肺上叶见6mm结节",
+            "findings_span": [
+              0,
+              10
+            ],
+            "impression_span": [
+              0,
+              10
+            ],
+            "suggestion": "两段存在文本不一致，请结合原始影像及报告人工核对；不能据此确定哪段正确。",
+            "id": "bf88df5a-9591-45d9-be4e-f7f0f53f8d72:1"
+          }
+        ],
+        "error_message": null,
+        "scope": [
+          "laterality"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶见6mm结节。",
+          "impression_text": "右肺上叶见6mm结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶见6mm结节",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "6mm",
+              "value": "6",
+              "unit": "mm",
+              "normalized_mm": "6",
+              "span_start": 5,
+              "span_end": 8
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "右肺上叶见6mm结节",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "right",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "6mm",
+              "value": "6",
+              "unit": "mm",
+              "normalized_mm": "6",
+              "span_start": 5,
+              "span_end": 8
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "laterality": {
+            "state": "completed",
+            "comparable_pairs": 1,
+            "skipped_pairs": [],
+            "issue_count": 1,
+            "coverage": "supported_content"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 1
+    },
+    {
+      "id": "L-02",
+      "module": "laterality",
+      "group": "明确冲突",
+      "findings_text": "右肺下叶见炎性改变。",
+      "impression_text": "左肺下叶见炎性改变。",
+      "expected_statuses": [
+        "needs_review"
+      ],
+      "expected_issue_count": 1,
+      "label_reason": "炎性改变单对象左右相反。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "e8a94c94-e874-474d-baeb-5c1936a7fded",
+        "checked_at": "2026-10-18T12:44:17.772817+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "needs_review",
+        "summary": "发现 1 条需人工核对项。",
+        "issues": [
+          {
+            "module": "laterality",
+            "source": "rule",
+            "review_state": "unreviewed",
+            "type": "laterality_inconsistency",
+            "title": "左右位置不一致",
+            "findings_evidence": "右肺下叶见炎性改变",
+            "impression_evidence": "左肺下叶见炎性改变",
+            "findings_span": [
+              0,
+              9
+            ],
+            "impression_span": [
+              0,
+              9
+            ],
+            "suggestion": "两段存在文本不一致，请结合原始影像及报告人工核对；不能据此确定哪段正确。",
+            "id": "e8a94c94-e874-474d-baeb-5c1936a7fded:1"
+          }
+        ],
+        "error_message": null,
+        "scope": [
+          "laterality"
+        ],
+        "input_snapshot": {
+          "findings_text": "右肺下叶见炎性改变。",
+          "impression_text": "左肺下叶见炎性改变。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "右肺下叶见炎性改变",
+            "span_start": 0,
+            "span_end": 9,
+            "side": "right",
+            "anatomy": "肺下叶",
+            "observation": "炎性改变",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺下叶见炎性改变",
+            "span_start": 0,
+            "span_end": 9,
+            "side": "left",
+            "anatomy": "肺下叶",
+            "observation": "炎性改变",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "laterality": {
+            "state": "completed",
+            "comparable_pairs": 1,
+            "skipped_pairs": [],
+            "issue_count": 1,
+            "coverage": "supported_content"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 1
+    },
+    {
+      "id": "L-03",
+      "module": "laterality",
+      "group": "正常",
+      "findings_text": "左肺下叶见结节。",
+      "impression_text": "左肺下叶结节。",
+      "expected_statuses": [
+        "pass"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "侧别同为左，位置与对象可对应。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "fc8b5dd0-fd4f-4e60-8d60-3ed23569f9c2",
+        "checked_at": "2026-10-18T12:44:17.772862+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "pass",
+        "summary": "在可明确比较的内容中未发现文本不一致；不代表整份报告正确。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "laterality"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺下叶见结节。",
+          "impression_text": "左肺下叶结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺下叶见结节",
+            "span_start": 0,
+            "span_end": 7,
+            "side": "left",
+            "anatomy": "肺下叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺下叶结节",
+            "span_start": 0,
+            "span_end": 6,
+            "side": "left",
+            "anatomy": "肺下叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "laterality": {
+            "state": "completed",
+            "comparable_pairs": 1,
+            "skipped_pairs": [],
+            "issue_count": 0,
+            "coverage": "supported_content"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 1
+    },
+    {
+      "id": "L-04",
+      "module": "laterality",
+      "group": "边界",
+      "findings_text": "左肺上叶见结节。",
+      "impression_text": "右肺下叶结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "不同肺叶不强配为同一对象。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "ef7584a0-950b-4492-9444-845e36e77257",
+        "checked_at": "2026-10-18T12:44:17.772895+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "laterality"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶见结节。",
+          "impression_text": "右肺下叶结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶见结节",
+            "span_start": 0,
+            "span_end": 7,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "右肺下叶结节",
+            "span_start": 0,
+            "span_end": 6,
+            "side": "right",
+            "anatomy": "肺下叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "laterality": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节",
+                "reason": "对象无法唯一配对"
+              },
+              {
+                "key": "肺下叶|结节",
+                "reason": "对象无法唯一配对"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "L-05",
+      "module": "laterality",
+      "group": "边界",
+      "findings_text": "左肺上叶未见结节。",
+      "impression_text": "右肺上叶未见结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "否定对象不参与侧别笔误比较。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "e5585e5b-9874-47f5-b835-5e997fd9a0ca",
+        "checked_at": "2026-10-18T12:44:17.772931+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "laterality"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶未见结节。",
+          "impression_text": "右肺上叶未见结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶未见结节",
+            "span_start": 0,
+            "span_end": 8,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "absent",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "右肺上叶未见结节",
+            "span_start": 0,
+            "span_end": 8,
+            "side": "right",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "absent",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "laterality": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节",
+                "reason": "否定或不确定对象不参与左右/尺寸比较"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "L-06",
+      "module": "laterality",
+      "group": "边界",
+      "findings_text": "左肺上叶不能排除结节。",
+      "impression_text": "右肺上叶见结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "不确定对象不能当明确存在。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "8199a365-b559-405d-b575-60ead7422257",
+        "checked_at": "2026-10-18T12:44:17.773143+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "laterality"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶不能排除结节。",
+          "impression_text": "右肺上叶见结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶不能排除结节",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "uncertain",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "右肺上叶见结节",
+            "span_start": 0,
+            "span_end": 7,
+            "side": "right",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "laterality": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节",
+                "reason": "否定或不确定对象不参与左右/尺寸比较"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "L-07",
+      "module": "laterality",
+      "group": "边界",
+      "findings_text": "左肺上叶见6mm结节。右肺上叶见9mm结节。",
+      "impression_text": "左肺上叶见9mm结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "多对象不通过大小猜侧别配对。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "37044f66-d3d1-4758-8153-19a20717d0f8",
+        "checked_at": "2026-10-18T12:44:17.773172+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "laterality"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶见6mm结节。右肺上叶见9mm结节。",
+          "impression_text": "左肺上叶见9mm结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶见6mm结节",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "6mm",
+              "value": "6",
+              "unit": "mm",
+              "normalized_mm": "6",
+              "span_start": 5,
+              "span_end": 8
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "findings",
+            "evidence": "右肺上叶见9mm结节",
+            "span_start": 11,
+            "span_end": 21,
+            "side": "right",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "9mm",
+              "value": "9",
+              "unit": "mm",
+              "normalized_mm": "9",
+              "span_start": 16,
+              "span_end": 19
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺上叶见9mm结节",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "9mm",
+              "value": "9",
+              "unit": "mm",
+              "normalized_mm": "9",
+              "span_start": 5,
+              "span_end": 8
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "laterality": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节",
+                "reason": "对象无法唯一配对"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "L-08",
+      "module": "laterality",
+      "group": "明确冲突",
+      "findings_text": "左肺上叶未见结节。右肺下叶见炎性改变。",
+      "impression_text": "右肺上叶未见结节。左肺下叶炎性改变。",
+      "expected_statuses": [
+        "needs_review"
+      ],
+      "expected_issue_count": 1,
+      "label_reason": "否定句不应屏蔽另一明确炎性改变的左右冲突。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "8b3b7335-545c-4fd3-bc95-73b71a7db55c",
+        "checked_at": "2026-10-18T12:44:17.773225+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "needs_review",
+        "summary": "发现 1 条需人工核对项。",
+        "issues": [
+          {
+            "module": "laterality",
+            "source": "rule",
+            "review_state": "unreviewed",
+            "type": "laterality_inconsistency",
+            "title": "左右位置不一致",
+            "findings_evidence": "右肺下叶见炎性改变",
+            "impression_evidence": "左肺下叶炎性改变",
+            "findings_span": [
+              9,
+              18
+            ],
+            "impression_span": [
+              9,
+              17
+            ],
+            "suggestion": "两段存在文本不一致，请结合原始影像及报告人工核对；不能据此确定哪段正确。",
+            "id": "8b3b7335-545c-4fd3-bc95-73b71a7db55c:1"
+          }
+        ],
+        "error_message": null,
+        "scope": [
+          "laterality"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶未见结节。右肺下叶见炎性改变。",
+          "impression_text": "右肺上叶未见结节。左肺下叶炎性改变。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶未见结节",
+            "span_start": 0,
+            "span_end": 8,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "absent",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "findings",
+            "evidence": "右肺下叶见炎性改变",
+            "span_start": 9,
+            "span_end": 18,
+            "side": "right",
+            "anatomy": "肺下叶",
+            "observation": "炎性改变",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "右肺上叶未见结节",
+            "span_start": 0,
+            "span_end": 8,
+            "side": "right",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "absent",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺下叶炎性改变",
+            "span_start": 9,
+            "span_end": 17,
+            "side": "left",
+            "anatomy": "肺下叶",
+            "observation": "炎性改变",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "laterality": {
+            "state": "completed",
+            "comparable_pairs": 1,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节",
+                "reason": "否定或不确定对象不参与左右/尺寸比较"
+              }
+            ],
+            "issue_count": 1,
+            "coverage": "partial"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 1
+    },
+    {
+      "id": "L-09",
+      "module": "laterality",
+      "group": "范围外",
+      "findings_text": "左肾见结石。",
+      "impression_text": "右肾结石。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "当前肺叶与有限病变词表不覆盖肾结石。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "679590fa-82f0-414a-9425-96dab5fd4b12",
+        "checked_at": "2026-10-18T12:44:17.773274+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "laterality"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肾见结石。",
+          "impression_text": "右肾结石。"
+        },
+        "findings": [],
+        "skipped_segments": [
+          {
+            "source": "findings",
+            "evidence": "左肾见结石",
+            "span_start": 0,
+            "span_end": 5,
+            "reason": "侧别、部位或对象不唯一/未识别"
+          },
+          {
+            "source": "impression",
+            "evidence": "右肾结石",
+            "span_start": 0,
+            "span_end": 4,
+            "reason": "侧别、部位或对象不唯一/未识别"
+          }
+        ],
+        "modules": {
+          "laterality": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "L-10",
+      "module": "laterality",
+      "group": "边界",
+      "findings_text": "左肺上叶见结节。",
+      "impression_text": "右肺上叶见炎性改变。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "不同对象不强配。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "a8675975-2d44-4442-9997-a45633eb1bfb",
+        "checked_at": "2026-10-18T12:44:17.773289+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "laterality"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶见结节。",
+          "impression_text": "右肺上叶见炎性改变。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶见结节",
+            "span_start": 0,
+            "span_end": 7,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "右肺上叶见炎性改变",
+            "span_start": 0,
+            "span_end": 9,
+            "side": "right",
+            "anatomy": "肺上叶",
+            "observation": "炎性改变",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "laterality": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节",
+                "reason": "对象无法唯一配对"
+              },
+              {
+                "key": "肺上叶|炎性改变",
+                "reason": "对象无法唯一配对"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "L-11",
+      "module": "laterality",
+      "group": "范围外",
+      "findings_text": "双肺上叶见结节。",
+      "impression_text": "右肺上叶结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "双侧不当作单侧唯一对象。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "51716b4d-37ef-445a-9f5b-efa80bf9ca12",
+        "checked_at": "2026-10-18T12:44:17.773318+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "laterality"
+        ],
+        "input_snapshot": {
+          "findings_text": "双肺上叶见结节。",
+          "impression_text": "右肺上叶结节。"
+        },
+        "findings": [
+          {
+            "source": "impression",
+            "evidence": "右肺上叶结节",
+            "span_start": 0,
+            "span_end": 6,
+            "side": "right",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [
+          {
+            "source": "findings",
+            "evidence": "双肺上叶见结节",
+            "span_start": 0,
+            "span_end": 7,
+            "reason": "侧别、部位或对象不唯一/未识别"
+          }
+        ],
+        "modules": {
+          "laterality": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节",
+                "reason": "同类片段存在不唯一/未识别对象，不能过滤后猜测配对"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "L-12",
+      "module": "laterality",
+      "group": "待标注探索",
+      "findings_text": "左上肺近胸膜区见一结节影，最大径6mm。",
+      "impression_text": "右上肺近胸膜区结节影。",
+      "expected_statuses": null,
+      "expected_issue_count": null,
+      "label_reason": "缩写与长句目标语义需评审，先观察不计符合分母。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "57edb534-2c5b-40fb-8935-6706c292d71a",
+        "checked_at": "2026-10-18T12:44:17.773339+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "laterality"
+        ],
+        "input_snapshot": {
+          "findings_text": "左上肺近胸膜区见一结节影，最大径6mm。",
+          "impression_text": "右上肺近胸膜区结节影。"
+        },
+        "findings": [],
+        "skipped_segments": [
+          {
+            "source": "findings",
+            "evidence": "左上肺近胸膜区见一结节影，最大径6mm",
+            "span_start": 0,
+            "span_end": 19,
+            "reason": "侧别、部位或对象不唯一/未识别"
+          },
+          {
+            "source": "impression",
+            "evidence": "右上肺近胸膜区结节影",
+            "span_start": 0,
+            "span_end": 10,
+            "reason": "侧别、部位或对象不唯一/未识别"
+          }
+        ],
+        "modules": {
+          "laterality": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "unscored",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "M-01",
+      "module": "measurement",
+      "group": "明确冲突",
+      "findings_text": "左肺下叶见6mm结节。",
+      "impression_text": "左肺下叶结节16mm。",
+      "expected_statuses": [
+        "needs_review"
+      ],
+      "expected_issue_count": 1,
+      "label_reason": "同对象两个精确单值不等。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "2c9eb0f9-8ccb-416d-b8d3-7e117ea76b4c",
+        "checked_at": "2026-10-18T12:44:17.773353+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "needs_review",
+        "summary": "发现 1 条需人工核对项。",
+        "issues": [
+          {
+            "module": "measurement",
+            "source": "rule",
+            "review_state": "unreviewed",
+            "type": "measurement_inconsistency",
+            "title": "尺寸数值不一致",
+            "findings_evidence": "左肺下叶见6mm结节",
+            "impression_evidence": "左肺下叶结节16mm",
+            "findings_span": [
+              0,
+              10
+            ],
+            "impression_span": [
+              0,
+              10
+            ],
+            "suggestion": "两段存在文本不一致，请结合原始影像及报告人工核对；不能据此确定哪段正确。",
+            "normalized_mm": {
+              "findings": "6",
+              "impression": "16"
+            },
+            "id": "2c9eb0f9-8ccb-416d-b8d3-7e117ea76b4c:1"
+          }
+        ],
+        "error_message": null,
+        "scope": [
+          "measurement"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺下叶见6mm结节。",
+          "impression_text": "左肺下叶结节16mm。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺下叶见6mm结节",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "left",
+            "anatomy": "肺下叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "6mm",
+              "value": "6",
+              "unit": "mm",
+              "normalized_mm": "6",
+              "span_start": 5,
+              "span_end": 8
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺下叶结节16mm",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "left",
+            "anatomy": "肺下叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "16mm",
+              "value": "16",
+              "unit": "mm",
+              "normalized_mm": "16",
+              "span_start": 6,
+              "span_end": 10
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "measurement": {
+            "state": "completed",
+            "comparable_pairs": 1,
+            "skipped_pairs": [],
+            "issue_count": 1,
+            "coverage": "supported_content"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 1
+    },
+    {
+      "id": "M-02",
+      "module": "measurement",
+      "group": "正常",
+      "findings_text": "左肺上叶见0.6cm结节。",
+      "impression_text": "左肺上叶见6mm结节。",
+      "expected_statuses": [
+        "pass"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "厘米转毫米后等值。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "94eaaf1f-3e72-4cc5-92df-0af8d92dec3a",
+        "checked_at": "2026-10-18T12:44:17.773395+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "pass",
+        "summary": "在可明确比较的内容中未发现文本不一致；不代表整份报告正确。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "measurement"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶见0.6cm结节。",
+          "impression_text": "左肺上叶见6mm结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶见0.6cm结节",
+            "span_start": 0,
+            "span_end": 12,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "0.6cm",
+              "value": "0.6",
+              "unit": "cm",
+              "normalized_mm": "6.0",
+              "span_start": 5,
+              "span_end": 10
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺上叶见6mm结节",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "6mm",
+              "value": "6",
+              "unit": "mm",
+              "normalized_mm": "6",
+              "span_start": 5,
+              "span_end": 8
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "measurement": {
+            "state": "completed",
+            "comparable_pairs": 1,
+            "skipped_pairs": [],
+            "issue_count": 0,
+            "coverage": "supported_content"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 1
+    },
+    {
+      "id": "M-03",
+      "module": "measurement",
+      "group": "正常",
+      "findings_text": "右肺上叶见2厘米炎性改变。",
+      "impression_text": "右肺上叶见20毫米炎性改变。",
+      "expected_statuses": [
+        "pass"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "中文长度单位等值，只验证文本计算。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "cbd71eb8-7b7f-4ae6-bf74-ff08f9753bad",
+        "checked_at": "2026-10-18T12:44:17.773438+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "pass",
+        "summary": "在可明确比较的内容中未发现文本不一致；不代表整份报告正确。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "measurement"
+        ],
+        "input_snapshot": {
+          "findings_text": "右肺上叶见2厘米炎性改变。",
+          "impression_text": "右肺上叶见20毫米炎性改变。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "右肺上叶见2厘米炎性改变",
+            "span_start": 0,
+            "span_end": 12,
+            "side": "right",
+            "anatomy": "肺上叶",
+            "observation": "炎性改变",
+            "assertion": "present",
+            "measurement": {
+              "raw": "2厘米",
+              "value": "2",
+              "unit": "cm",
+              "normalized_mm": "20",
+              "span_start": 5,
+              "span_end": 8
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "右肺上叶见20毫米炎性改变",
+            "span_start": 0,
+            "span_end": 13,
+            "side": "right",
+            "anatomy": "肺上叶",
+            "observation": "炎性改变",
+            "assertion": "present",
+            "measurement": {
+              "raw": "20毫米",
+              "value": "20",
+              "unit": "mm",
+              "normalized_mm": "20",
+              "span_start": 5,
+              "span_end": 9
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "measurement": {
+            "state": "completed",
+            "comparable_pairs": 1,
+            "skipped_pairs": [],
+            "issue_count": 0,
+            "coverage": "supported_content"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 1
+    },
+    {
+      "id": "M-04",
+      "module": "measurement",
+      "group": "明确冲突",
+      "findings_text": "右肺下叶见结节，直径0.7厘米。",
+      "impression_text": "右肺下叶结节，直径0.9厘米。",
+      "expected_statuses": [
+        "needs_review"
+      ],
+      "expected_issue_count": 1,
+      "label_reason": "同位置单结节精确长度不同。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "a92bbd94-ed5c-4c55-99a2-8a1fcdeb81d7",
+        "checked_at": "2026-10-18T12:44:17.773477+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "needs_review",
+        "summary": "发现 1 条需人工核对项。",
+        "issues": [
+          {
+            "module": "measurement",
+            "source": "rule",
+            "review_state": "unreviewed",
+            "type": "measurement_inconsistency",
+            "title": "尺寸数值不一致",
+            "findings_evidence": "右肺下叶见结节，直径0.7厘米",
+            "impression_evidence": "右肺下叶结节，直径0.9厘米",
+            "findings_span": [
+              0,
+              15
+            ],
+            "impression_span": [
+              0,
+              14
+            ],
+            "suggestion": "两段存在文本不一致，请结合原始影像及报告人工核对；不能据此确定哪段正确。",
+            "normalized_mm": {
+              "findings": "7.0",
+              "impression": "9.0"
+            },
+            "id": "a92bbd94-ed5c-4c55-99a2-8a1fcdeb81d7:1"
+          }
+        ],
+        "error_message": null,
+        "scope": [
+          "measurement"
+        ],
+        "input_snapshot": {
+          "findings_text": "右肺下叶见结节，直径0.7厘米。",
+          "impression_text": "右肺下叶结节，直径0.9厘米。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "右肺下叶见结节，直径0.7厘米",
+            "span_start": 0,
+            "span_end": 15,
+            "side": "right",
+            "anatomy": "肺下叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "0.7厘米",
+              "value": "0.7",
+              "unit": "cm",
+              "normalized_mm": "7.0",
+              "span_start": 10,
+              "span_end": 15
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "右肺下叶结节，直径0.9厘米",
+            "span_start": 0,
+            "span_end": 14,
+            "side": "right",
+            "anatomy": "肺下叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "0.9厘米",
+              "value": "0.9",
+              "unit": "cm",
+              "normalized_mm": "9.0",
+              "span_start": 9,
+              "span_end": 14
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "measurement": {
+            "state": "completed",
+            "comparable_pairs": 1,
+            "skipped_pairs": [],
+            "issue_count": 1,
+            "coverage": "supported_content"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 1
+    },
+    {
+      "id": "M-05",
+      "module": "measurement",
+      "group": "边界",
+      "findings_text": "左肺上叶见6×4mm结节。",
+      "impression_text": "左肺上叶见7mm结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "多径表达不简化成一个数字比较。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "fbd7c1a8-8048-4f02-a6c7-412a0f473e6b",
+        "checked_at": "2026-10-18T12:44:17.773519+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "measurement"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶见6×4mm结节。",
+          "impression_text": "左肺上叶见7mm结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶见6×4mm结节",
+            "span_start": 0,
+            "span_end": 12,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "范围值或多径测量暂未支持",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺上叶见7mm结节",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "7mm",
+              "value": "7",
+              "unit": "mm",
+              "normalized_mm": "7",
+              "span_start": 5,
+              "span_end": 8
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "measurement": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节|left",
+                "reason": "范围值或多径测量暂未支持"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "M-06",
+      "module": "measurement",
+      "group": "边界",
+      "findings_text": "左肺上叶见约6mm结节。",
+      "impression_text": "左肺上叶见16mm结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "约值不是精确值。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "80e668d8-8f5d-4c85-9d91-10c84de63e43",
+        "checked_at": "2026-10-18T12:44:17.773554+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "measurement"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶见约6mm结节。",
+          "impression_text": "左肺上叶见16mm结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶见约6mm结节",
+            "span_start": 0,
+            "span_end": 11,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "近似值、比较值或非长度单位暂未支持",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺上叶见16mm结节",
+            "span_start": 0,
+            "span_end": 11,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "16mm",
+              "value": "16",
+              "unit": "mm",
+              "normalized_mm": "16",
+              "span_start": 5,
+              "span_end": 9
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "measurement": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节|left",
+                "reason": "近似值、比较值或非长度单位暂未支持"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "M-07",
+      "module": "measurement",
+      "group": "边界",
+      "findings_text": "左肺上叶见6-9mm结节。",
+      "impression_text": "左肺上叶见9mm结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "范围不是一个精确单值。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "1e017460-815e-4b11-af61-ce2f85710854",
+        "checked_at": "2026-10-18T12:44:17.773588+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "measurement"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶见6-9mm结节。",
+          "impression_text": "左肺上叶见9mm结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶见6-9mm结节",
+            "span_start": 0,
+            "span_end": 12,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "范围值或多径测量暂未支持",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺上叶见9mm结节",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "9mm",
+              "value": "9",
+              "unit": "mm",
+              "normalized_mm": "9",
+              "span_start": 5,
+              "span_end": 8
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "measurement": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节|left",
+                "reason": "范围值或多径测量暂未支持"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "M-08",
+      "module": "measurement",
+      "group": "边界",
+      "findings_text": "左肺上叶见6mm结节。左肺上叶见9mm结节。",
+      "impression_text": "左肺上叶结节16mm。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "同位置多个对象不能唯一对应。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "b2d4bf85-6d88-4786-ab0c-0cea38f4be59",
+        "checked_at": "2026-10-18T12:44:17.773620+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "measurement"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶见6mm结节。左肺上叶见9mm结节。",
+          "impression_text": "左肺上叶结节16mm。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶见6mm结节",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "6mm",
+              "value": "6",
+              "unit": "mm",
+              "normalized_mm": "6",
+              "span_start": 5,
+              "span_end": 8
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "findings",
+            "evidence": "左肺上叶见9mm结节",
+            "span_start": 11,
+            "span_end": 21,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "9mm",
+              "value": "9",
+              "unit": "mm",
+              "normalized_mm": "9",
+              "span_start": 16,
+              "span_end": 19
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺上叶结节16mm",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "16mm",
+              "value": "16",
+              "unit": "mm",
+              "normalized_mm": "16",
+              "span_start": 6,
+              "span_end": 10
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "measurement": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节|left",
+                "reason": "对象无法唯一配对"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "M-09",
+      "module": "measurement",
+      "group": "边界",
+      "findings_text": "左肺上叶见6mm结节。",
+      "impression_text": "右肺上叶见16mm结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "尺寸要求同侧，不把侧别问题改称尺寸错误。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "75c1929f-4109-4ff5-a024-3a12152c3030",
+        "checked_at": "2026-10-18T12:44:17.773667+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "measurement"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶见6mm结节。",
+          "impression_text": "右肺上叶见16mm结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶见6mm结节",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "6mm",
+              "value": "6",
+              "unit": "mm",
+              "normalized_mm": "6",
+              "span_start": 5,
+              "span_end": 8
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "右肺上叶见16mm结节",
+            "span_start": 0,
+            "span_end": 11,
+            "side": "right",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "16mm",
+              "value": "16",
+              "unit": "mm",
+              "normalized_mm": "16",
+              "span_start": 5,
+              "span_end": 9
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "measurement": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节|left",
+                "reason": "对象无法唯一配对"
+              },
+              {
+                "key": "肺上叶|结节|right",
+                "reason": "对象无法唯一配对"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "M-10",
+      "module": "measurement",
+      "group": "边界",
+      "findings_text": "左肺上叶见结节。",
+      "impression_text": "左肺上叶结节6mm。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "缺少另一段尺寸。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "09002b60-6c9e-4340-bc8a-55d0038a33ef",
+        "checked_at": "2026-10-18T12:44:17.773703+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "measurement"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶见结节。",
+          "impression_text": "左肺上叶结节6mm。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶见结节",
+            "span_start": 0,
+            "span_end": 7,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺上叶结节6mm",
+            "span_start": 0,
+            "span_end": 9,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "6mm",
+              "value": "6",
+              "unit": "mm",
+              "normalized_mm": "6",
+              "span_start": 6,
+              "span_end": 9
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "measurement": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节|left",
+                "reason": "没有单一受支持长度"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "M-11",
+      "module": "measurement",
+      "group": "边界",
+      "findings_text": "左肺上叶结节较前6mm。",
+      "impression_text": "左肺上叶结节16mm。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "历史比较暂不支持，不能把前次值当本次单值。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "d9b44a15-f7ff-4b9b-a0ce-c70dba693553",
+        "checked_at": "2026-10-18T12:44:17.773734+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "measurement"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶结节较前6mm。",
+          "impression_text": "左肺上叶结节16mm。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶结节较前6mm",
+            "span_start": 0,
+            "span_end": 11,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "明确时间/历史描述暂未支持跨时间配对",
+            "comparison_skip_reason": "明确时间/历史描述暂未支持跨时间配对"
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺上叶结节16mm",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "16mm",
+              "value": "16",
+              "unit": "mm",
+              "normalized_mm": "16",
+              "span_start": 6,
+              "span_end": 10
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "measurement": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节|left",
+                "reason": "明确时间/历史描述暂未支持跨时间配对"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "M-12",
+      "module": "measurement",
+      "group": "正常",
+      "findings_text": "右肺下叶见6毫米结节。",
+      "impression_text": "右肺下叶见0.6厘米结节。",
+      "expected_statuses": [
+        "pass"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "中文单位归一后相等。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "e2d913c5-ba36-478f-8932-96f19ba7a62d",
+        "checked_at": "2026-10-18T12:44:17.773767+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "pass",
+        "summary": "在可明确比较的内容中未发现文本不一致；不代表整份报告正确。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "measurement"
+        ],
+        "input_snapshot": {
+          "findings_text": "右肺下叶见6毫米结节。",
+          "impression_text": "右肺下叶见0.6厘米结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "右肺下叶见6毫米结节",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "right",
+            "anatomy": "肺下叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "6毫米",
+              "value": "6",
+              "unit": "mm",
+              "normalized_mm": "6",
+              "span_start": 5,
+              "span_end": 8
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "右肺下叶见0.6厘米结节",
+            "span_start": 0,
+            "span_end": 12,
+            "side": "right",
+            "anatomy": "肺下叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": {
+              "raw": "0.6厘米",
+              "value": "0.6",
+              "unit": "cm",
+              "normalized_mm": "6.0",
+              "span_start": 5,
+              "span_end": 10
+            },
+            "measurement_skip_reason": null,
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "measurement": {
+            "state": "completed",
+            "comparable_pairs": 1,
+            "skipped_pairs": [],
+            "issue_count": 0,
+            "coverage": "supported_content"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 1
+    },
+    {
+      "id": "A-01",
+      "module": "assertion",
+      "group": "明确冲突",
+      "findings_text": "左肺下叶见结节。",
+      "impression_text": "左肺下叶未见结节。",
+      "expected_statuses": [
+        "needs_review"
+      ],
+      "expected_issue_count": 1,
+      "label_reason": "同侧同位置同对象明确有/无相反。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "21158402-8dcf-43f5-9002-ae0bd960c879",
+        "checked_at": "2026-10-18T12:44:17.773805+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "needs_review",
+        "summary": "发现 1 条需人工核对项。",
+        "issues": [
+          {
+            "module": "assertion",
+            "source": "rule",
+            "review_state": "unreviewed",
+            "type": "assertion_inconsistency",
+            "title": "肯定与否定不一致",
+            "findings_evidence": "左肺下叶见结节",
+            "impression_evidence": "左肺下叶未见结节",
+            "findings_span": [
+              0,
+              7
+            ],
+            "impression_span": [
+              0,
+              8
+            ],
+            "suggestion": "两段存在文本不一致，请结合原始影像及报告人工核对；不能据此确定哪段正确。",
+            "assertions": {
+              "findings": "present",
+              "impression": "absent"
+            },
+            "id": "21158402-8dcf-43f5-9002-ae0bd960c879:1"
+          }
+        ],
+        "error_message": null,
+        "scope": [
+          "assertion"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺下叶见结节。",
+          "impression_text": "左肺下叶未见结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺下叶见结节",
+            "span_start": 0,
+            "span_end": 7,
+            "side": "left",
+            "anatomy": "肺下叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺下叶未见结节",
+            "span_start": 0,
+            "span_end": 8,
+            "side": "left",
+            "anatomy": "肺下叶",
+            "observation": "结节",
+            "assertion": "absent",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "assertion": {
+            "state": "completed",
+            "comparable_pairs": 1,
+            "skipped_pairs": [],
+            "issue_count": 1,
+            "coverage": "supported_content"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 1
+    },
+    {
+      "id": "A-02",
+      "module": "assertion",
+      "group": "明确冲突",
+      "findings_text": "右肺上叶无炎性改变。",
+      "impression_text": "右肺上叶见炎性改变。",
+      "expected_statuses": [
+        "needs_review"
+      ],
+      "expected_issue_count": 1,
+      "label_reason": "两段顺序颠倒也要发现有无相反。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "4e4f771d-d891-4c65-bb4c-074fcee15224",
+        "checked_at": "2026-10-18T12:44:17.773836+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "needs_review",
+        "summary": "发现 1 条需人工核对项。",
+        "issues": [
+          {
+            "module": "assertion",
+            "source": "rule",
+            "review_state": "unreviewed",
+            "type": "assertion_inconsistency",
+            "title": "肯定与否定不一致",
+            "findings_evidence": "右肺上叶无炎性改变",
+            "impression_evidence": "右肺上叶见炎性改变",
+            "findings_span": [
+              0,
+              9
+            ],
+            "impression_span": [
+              0,
+              9
+            ],
+            "suggestion": "两段存在文本不一致，请结合原始影像及报告人工核对；不能据此确定哪段正确。",
+            "assertions": {
+              "findings": "absent",
+              "impression": "present"
+            },
+            "id": "4e4f771d-d891-4c65-bb4c-074fcee15224:1"
+          }
+        ],
+        "error_message": null,
+        "scope": [
+          "assertion"
+        ],
+        "input_snapshot": {
+          "findings_text": "右肺上叶无炎性改变。",
+          "impression_text": "右肺上叶见炎性改变。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "右肺上叶无炎性改变",
+            "span_start": 0,
+            "span_end": 9,
+            "side": "right",
+            "anatomy": "肺上叶",
+            "observation": "炎性改变",
+            "assertion": "absent",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "右肺上叶见炎性改变",
+            "span_start": 0,
+            "span_end": 9,
+            "side": "right",
+            "anatomy": "肺上叶",
+            "observation": "炎性改变",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "assertion": {
+            "state": "completed",
+            "comparable_pairs": 1,
+            "skipped_pairs": [],
+            "issue_count": 1,
+            "coverage": "supported_content"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 1
+    },
+    {
+      "id": "A-03",
+      "module": "assertion",
+      "group": "正常",
+      "findings_text": "右肺下叶未见结节。",
+      "impression_text": "右肺下叶无结节。",
+      "expected_statuses": [
+        "pass"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "明确否定一致，可比较不应报警。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "1fab9655-e9e1-45ba-9088-ed6507adb41e",
+        "checked_at": "2026-10-18T12:44:17.773867+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "pass",
+        "summary": "在可明确比较的内容中未发现文本不一致；不代表整份报告正确。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "assertion"
+        ],
+        "input_snapshot": {
+          "findings_text": "右肺下叶未见结节。",
+          "impression_text": "右肺下叶无结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "右肺下叶未见结节",
+            "span_start": 0,
+            "span_end": 8,
+            "side": "right",
+            "anatomy": "肺下叶",
+            "observation": "结节",
+            "assertion": "absent",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "右肺下叶无结节",
+            "span_start": 0,
+            "span_end": 7,
+            "side": "right",
+            "anatomy": "肺下叶",
+            "observation": "结节",
+            "assertion": "absent",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "assertion": {
+            "state": "completed",
+            "comparable_pairs": 1,
+            "skipped_pairs": [],
+            "issue_count": 0,
+            "coverage": "supported_content"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 1
+    },
+    {
+      "id": "A-04",
+      "module": "assertion",
+      "group": "正常",
+      "findings_text": "左肺上叶见炎性改变。",
+      "impression_text": "左肺上叶炎性改变。",
+      "expected_statuses": [
+        "pass"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "明确存在一致。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "bd8a92c9-78f4-411b-9851-aa235b913ce2",
+        "checked_at": "2026-10-18T12:44:17.773893+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "pass",
+        "summary": "在可明确比较的内容中未发现文本不一致；不代表整份报告正确。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "assertion"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶见炎性改变。",
+          "impression_text": "左肺上叶炎性改变。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶见炎性改变",
+            "span_start": 0,
+            "span_end": 9,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "炎性改变",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺上叶炎性改变",
+            "span_start": 0,
+            "span_end": 8,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "炎性改变",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "assertion": {
+            "state": "completed",
+            "comparable_pairs": 1,
+            "skipped_pairs": [],
+            "issue_count": 0,
+            "coverage": "supported_content"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 1
+    },
+    {
+      "id": "A-05",
+      "module": "assertion",
+      "group": "明确冲突",
+      "findings_text": "左肺上叶这枚结节不存在。",
+      "impression_text": "左肺上叶可见一枚结节。",
+      "expected_statuses": [
+        "needs_review"
+      ],
+      "expected_issue_count": 1,
+      "label_reason": "完整对象后不存在与可见相反。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "e12a293a-d9c9-4b43-bc6b-47411070cd1d",
+        "checked_at": "2026-10-18T12:44:17.773919+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "needs_review",
+        "summary": "发现 1 条需人工核对项。",
+        "issues": [
+          {
+            "module": "assertion",
+            "source": "rule",
+            "review_state": "unreviewed",
+            "type": "assertion_inconsistency",
+            "title": "肯定与否定不一致",
+            "findings_evidence": "左肺上叶这枚结节不存在",
+            "impression_evidence": "左肺上叶可见一枚结节",
+            "findings_span": [
+              0,
+              11
+            ],
+            "impression_span": [
+              0,
+              10
+            ],
+            "suggestion": "两段存在文本不一致，请结合原始影像及报告人工核对；不能据此确定哪段正确。",
+            "assertions": {
+              "findings": "absent",
+              "impression": "present"
+            },
+            "id": "e12a293a-d9c9-4b43-bc6b-47411070cd1d:1"
+          }
+        ],
+        "error_message": null,
+        "scope": [
+          "assertion"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶这枚结节不存在。",
+          "impression_text": "左肺上叶可见一枚结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶这枚结节不存在",
+            "span_start": 0,
+            "span_end": 11,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "absent",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺上叶可见一枚结节",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "assertion": {
+            "state": "completed",
+            "comparable_pairs": 1,
+            "skipped_pairs": [],
+            "issue_count": 1,
+            "coverage": "supported_content"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 1
+    },
+    {
+      "id": "A-06",
+      "module": "assertion",
+      "group": "边界",
+      "findings_text": "左肺上叶可能未见结节。",
+      "impression_text": "左肺上叶未见结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "模糊表达不作为明确肯否。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "d4b8d0c9-6f44-43a0-a6b9-d9fa3e10de16",
+        "checked_at": "2026-10-18T12:44:17.773947+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "assertion"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶可能未见结节。",
+          "impression_text": "左肺上叶未见结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶可能未见结节",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "uncertain",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺上叶未见结节",
+            "span_start": 0,
+            "span_end": 8,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "absent",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "assertion": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节|left",
+                "reason": "不确定/未知断言不参与肯否冲突比较"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "A-07",
+      "module": "assertion",
+      "group": "边界",
+      "findings_text": "左肺上叶不能排除未见结节。",
+      "impression_text": "左肺上叶见结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "复杂否定不强判。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "2c3fdf80-aa4c-43fc-939d-dc9d4982841a",
+        "checked_at": "2026-10-18T12:44:17.773972+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "assertion"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶不能排除未见结节。",
+          "impression_text": "左肺上叶见结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶不能排除未见结节",
+            "span_start": 0,
+            "span_end": 12,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "uncertain",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺上叶见结节",
+            "span_start": 0,
+            "span_end": 7,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "assertion": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节|left",
+                "reason": "不确定/未知断言不参与肯否冲突比较"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "A-08",
+      "module": "assertion",
+      "group": "稳定性反例",
+      "findings_text": "左肺上叶结节没有增大。",
+      "impression_text": "左肺上叶结节稳定。",
+      "expected_statuses": [
+        "pass",
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "稳定性不等于不存在；状态可随抽取范围不同，必须不制造肯否冲突。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "224cced0-01b2-4c7b-8276-2b7b220fe5ed",
+        "checked_at": "2026-10-18T12:44:17.773997+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "pass",
+        "summary": "在可明确比较的内容中未发现文本不一致；不代表整份报告正确。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "assertion"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶结节没有增大。",
+          "impression_text": "左肺上叶结节稳定。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶结节没有增大",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺上叶结节稳定",
+            "span_start": 0,
+            "span_end": 8,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "assertion": {
+            "state": "completed",
+            "comparable_pairs": 1,
+            "skipped_pairs": [],
+            "issue_count": 0,
+            "coverage": "supported_content"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 1
+    },
+    {
+      "id": "A-09",
+      "module": "assertion",
+      "group": "边界",
+      "findings_text": "左肺上叶见结节。",
+      "impression_text": "右肺上叶未见结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "不同侧的有无不直接相互矛盾。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "97bfdcc6-6212-41a5-a221-545861ddca37",
+        "checked_at": "2026-10-18T12:44:17.774023+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "assertion"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶见结节。",
+          "impression_text": "右肺上叶未见结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶见结节",
+            "span_start": 0,
+            "span_end": 7,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "右肺上叶未见结节",
+            "span_start": 0,
+            "span_end": 8,
+            "side": "right",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "absent",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "assertion": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节|left",
+                "reason": "对象无法唯一配对"
+              },
+              {
+                "key": "肺上叶|结节|right",
+                "reason": "对象无法唯一配对"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "A-10",
+      "module": "assertion",
+      "group": "边界",
+      "findings_text": "左肺上叶见结节。左肺上叶未见结节。",
+      "impression_text": "左肺上叶见结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "同位置同对象多次描述不能唯一对应。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "81d81b05-86c5-4197-bef2-9e1c21d1e6b8",
+        "checked_at": "2026-10-18T12:44:17.774048+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "assertion"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶见结节。左肺上叶未见结节。",
+          "impression_text": "左肺上叶见结节。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶见结节",
+            "span_start": 0,
+            "span_end": 7,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "findings",
+            "evidence": "左肺上叶未见结节",
+            "span_start": 8,
+            "span_end": 16,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "absent",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺上叶见结节",
+            "span_start": 0,
+            "span_end": 7,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "assertion": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节|left",
+                "reason": "对象无法唯一配对"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "A-11",
+      "module": "assertion",
+      "group": "边界",
+      "findings_text": "左肺下叶见结节。",
+      "impression_text": "左肺下叶未见炎性改变。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "不同对象的肯否不比较。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "3f1a0c45-a314-4ce8-8138-40b45c72012f",
+        "checked_at": "2026-10-18T12:44:17.774080+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "assertion"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺下叶见结节。",
+          "impression_text": "左肺下叶未见炎性改变。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺下叶见结节",
+            "span_start": 0,
+            "span_end": 7,
+            "side": "left",
+            "anatomy": "肺下叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺下叶未见炎性改变",
+            "span_start": 0,
+            "span_end": 10,
+            "side": "left",
+            "anatomy": "肺下叶",
+            "observation": "炎性改变",
+            "assertion": "absent",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "assertion": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺下叶|结节|left",
+                "reason": "对象无法唯一配对"
+              },
+              {
+                "key": "肺下叶|炎性改变|left",
+                "reason": "对象无法唯一配对"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "matched",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    },
+    {
+      "id": "A-12",
+      "module": "assertion",
+      "group": "待标注探索",
+      "findings_text": "左肺上叶既往结节此次未见残留。",
+      "impression_text": "左肺上叶结节已消失。",
+      "expected_statuses": null,
+      "expected_issue_count": null,
+      "label_reason": "涉及时间与复杂消失表达，未有领域标注，先观察不计分。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值",
+      "actual": {
+        "run_id": "2e0ec7ea-8425-4443-be3a-7037a50615c7",
+        "checked_at": "2026-10-18T12:44:17.774105+00:00",
+        "checker_version": "v1.3.1-rules",
+        "status": "unable_to_check",
+        "summary": "没有可明确比较的内容；请查看跳过范围，不代表报告通过。",
+        "issues": [],
+        "error_message": null,
+        "scope": [
+          "assertion"
+        ],
+        "input_snapshot": {
+          "findings_text": "左肺上叶既往结节此次未见残留。",
+          "impression_text": "左肺上叶结节已消失。"
+        },
+        "findings": [
+          {
+            "source": "findings",
+            "evidence": "左肺上叶既往结节此次未见残留",
+            "span_start": 0,
+            "span_end": 14,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "unknown",
+            "measurement": null,
+            "measurement_skip_reason": "明确时间/历史描述暂未支持跨时间配对",
+            "comparison_skip_reason": "明确时间/历史描述暂未支持跨时间配对"
+          },
+          {
+            "source": "impression",
+            "evidence": "左肺上叶结节已消失",
+            "span_start": 0,
+            "span_end": 9,
+            "side": "left",
+            "anatomy": "肺上叶",
+            "observation": "结节",
+            "assertion": "present",
+            "measurement": null,
+            "measurement_skip_reason": "没有单一受支持长度",
+            "comparison_skip_reason": null
+          }
+        ],
+        "skipped_segments": [],
+        "modules": {
+          "assertion": {
+            "state": "completed",
+            "comparable_pairs": 0,
+            "skipped_pairs": [
+              {
+                "key": "肺上叶|结节|left",
+                "reason": "明确时间/历史描述暂未支持跨时间配对"
+              }
+            ],
+            "issue_count": 0,
+            "coverage": "none"
+          }
+        },
+        "llm_status": "not_implemented",
+        "index_unit": "unicode_code_point"
+      },
+      "verdict": "unscored",
+      "mismatch_reasons": [],
+      "evidence_valid": true,
+      "comparable_pairs": 0
+    }
+  ],
+  "caveat": "分母为有预期草案的合成案例；符合状态、数量、类别与原文定位，不是临床准确率。覆盖和不提示须分开看。",
+  "provenance": {
+    "dataset_file": "18_三规则冻结验收集-v0.1.json",
+    "dataset_sha256": "8019ea592886331d2a4a7815d5e8aa2055f42f2e843a2d060e6ee436406ad374",
+    "dataset_version": "three-rule-frozen-v0.1",
+    "label_status": "AI_draft_not_clinical_gold",
+    "checker_version": "v1.3.1-rules",
+    "created_on": "2026-10-18",
+    "independence_caveat": "新建并冻结的验收集；作者已知既有实现，不是严格外部盲测、医师独立标注或随机临床样本。与既有用例可能语义相似，不能据此声称泛化准确率。",
+    "model_requests": 0,
+    "source_sha256": {
+      "src/report_checker.py": "17302c823b6843f0a2f4c267abdfb61a10066fba8c5f868dcb2d6fd7749b7e66",
+      "src/report_structure.py": "6a50b695e933d0afc57d62b403beec23c86b7e94038404088648b103e0a10d4e",
+      "src/laterality_checker.py": "a9ae8f72d1c605d4d18271be6db98cea39e0cea7fe9fdf9a37172c0438741c36",
+      "run_acceptance.py": "fc753d1c114335c99c00c7d1ca552b752a6c3fe9e6501c93d607767c4b24976f"
+    }
+  }
+}

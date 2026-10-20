@@ -1,0 +1,21 @@
+{
+  "reports": [
+    {
+      "name": "左右旧基线（10-13）",
+      "source": "04_扩展模拟评测基线结果-2026-10-13.json",
+      "sample_count": 24,
+      "labeled_count": 22,
+      "matched_count": 17,
+      "unscored_count": 2
+    },
+    {
+      "name": "左右否定隔离后（10-13）",
+      "source": "06_左右规则否定隔离后评测结果-2026-10-13.json",
+      "sample_count": 24,
+      "labeled_count": 22,
+      "matched_count": 20,
+      "unscored_count": 2
+    }
+  ],
+  "caveat": "定向构造的合成开发集，标签仍待本人复核。以上是历史左右入口快照，不是临床准确率，也不代表当前三模块整体效果。"
+}

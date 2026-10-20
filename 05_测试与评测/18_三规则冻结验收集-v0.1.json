@@ -1,0 +1,480 @@
+{
+  "version": "three-rule-frozen-v0.1",
+  "created_on": "2026-10-18",
+  "data_kind": "synthetic_report_pairs",
+  "label_status": "AI_draft_not_clinical_gold",
+  "freeze_policy": "本轮在首次执行前保存并固定SHA-256；执行后不改输入/标签，不据结果调本轮规则。未来纠错须新版本并保留本次结果。",
+  "independence_caveat": "新建并冻结的验收集；作者已知既有实现，不是严格外部盲测、医师独立标注或随机临床样本。与既有用例可能语义相似，不能据此声称泛化准确率。",
+  "modules": [
+    "laterality",
+    "measurement",
+    "assertion"
+  ],
+  "cases": [
+    {
+      "id": "L-01",
+      "module": "laterality",
+      "group": "明确冲突",
+      "findings_text": "左肺上叶见6mm结节。",
+      "impression_text": "右肺上叶见6mm结节。",
+      "expected_statuses": [
+        "needs_review"
+      ],
+      "expected_issue_count": 1,
+      "label_reason": "同一肺叶单对象，明确左右相反。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "L-02",
+      "module": "laterality",
+      "group": "明确冲突",
+      "findings_text": "右肺下叶见炎性改变。",
+      "impression_text": "左肺下叶见炎性改变。",
+      "expected_statuses": [
+        "needs_review"
+      ],
+      "expected_issue_count": 1,
+      "label_reason": "炎性改变单对象左右相反。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "L-03",
+      "module": "laterality",
+      "group": "正常",
+      "findings_text": "左肺下叶见结节。",
+      "impression_text": "左肺下叶结节。",
+      "expected_statuses": [
+        "pass"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "侧别同为左，位置与对象可对应。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "L-04",
+      "module": "laterality",
+      "group": "边界",
+      "findings_text": "左肺上叶见结节。",
+      "impression_text": "右肺下叶结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "不同肺叶不强配为同一对象。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "L-05",
+      "module": "laterality",
+      "group": "边界",
+      "findings_text": "左肺上叶未见结节。",
+      "impression_text": "右肺上叶未见结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "否定对象不参与侧别笔误比较。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "L-06",
+      "module": "laterality",
+      "group": "边界",
+      "findings_text": "左肺上叶不能排除结节。",
+      "impression_text": "右肺上叶见结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "不确定对象不能当明确存在。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "L-07",
+      "module": "laterality",
+      "group": "边界",
+      "findings_text": "左肺上叶见6mm结节。右肺上叶见9mm结节。",
+      "impression_text": "左肺上叶见9mm结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "多对象不通过大小猜侧别配对。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "L-08",
+      "module": "laterality",
+      "group": "明确冲突",
+      "findings_text": "左肺上叶未见结节。右肺下叶见炎性改变。",
+      "impression_text": "右肺上叶未见结节。左肺下叶炎性改变。",
+      "expected_statuses": [
+        "needs_review"
+      ],
+      "expected_issue_count": 1,
+      "label_reason": "否定句不应屏蔽另一明确炎性改变的左右冲突。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "L-09",
+      "module": "laterality",
+      "group": "范围外",
+      "findings_text": "左肾见结石。",
+      "impression_text": "右肾结石。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "当前肺叶与有限病变词表不覆盖肾结石。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "L-10",
+      "module": "laterality",
+      "group": "边界",
+      "findings_text": "左肺上叶见结节。",
+      "impression_text": "右肺上叶见炎性改变。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "不同对象不强配。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "L-11",
+      "module": "laterality",
+      "group": "范围外",
+      "findings_text": "双肺上叶见结节。",
+      "impression_text": "右肺上叶结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "双侧不当作单侧唯一对象。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "L-12",
+      "module": "laterality",
+      "group": "待标注探索",
+      "findings_text": "左上肺近胸膜区见一结节影，最大径6mm。",
+      "impression_text": "右上肺近胸膜区结节影。",
+      "expected_statuses": null,
+      "expected_issue_count": null,
+      "label_reason": "缩写与长句目标语义需评审，先观察不计符合分母。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "M-01",
+      "module": "measurement",
+      "group": "明确冲突",
+      "findings_text": "左肺下叶见6mm结节。",
+      "impression_text": "左肺下叶结节16mm。",
+      "expected_statuses": [
+        "needs_review"
+      ],
+      "expected_issue_count": 1,
+      "label_reason": "同对象两个精确单值不等。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "M-02",
+      "module": "measurement",
+      "group": "正常",
+      "findings_text": "左肺上叶见0.6cm结节。",
+      "impression_text": "左肺上叶见6mm结节。",
+      "expected_statuses": [
+        "pass"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "厘米转毫米后等值。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "M-03",
+      "module": "measurement",
+      "group": "正常",
+      "findings_text": "右肺上叶见2厘米炎性改变。",
+      "impression_text": "右肺上叶见20毫米炎性改变。",
+      "expected_statuses": [
+        "pass"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "中文长度单位等值，只验证文本计算。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "M-04",
+      "module": "measurement",
+      "group": "明确冲突",
+      "findings_text": "右肺下叶见结节，直径0.7厘米。",
+      "impression_text": "右肺下叶结节，直径0.9厘米。",
+      "expected_statuses": [
+        "needs_review"
+      ],
+      "expected_issue_count": 1,
+      "label_reason": "同位置单结节精确长度不同。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "M-05",
+      "module": "measurement",
+      "group": "边界",
+      "findings_text": "左肺上叶见6×4mm结节。",
+      "impression_text": "左肺上叶见7mm结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "多径表达不简化成一个数字比较。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "M-06",
+      "module": "measurement",
+      "group": "边界",
+      "findings_text": "左肺上叶见约6mm结节。",
+      "impression_text": "左肺上叶见16mm结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "约值不是精确值。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "M-07",
+      "module": "measurement",
+      "group": "边界",
+      "findings_text": "左肺上叶见6-9mm结节。",
+      "impression_text": "左肺上叶见9mm结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "范围不是一个精确单值。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "M-08",
+      "module": "measurement",
+      "group": "边界",
+      "findings_text": "左肺上叶见6mm结节。左肺上叶见9mm结节。",
+      "impression_text": "左肺上叶结节16mm。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "同位置多个对象不能唯一对应。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "M-09",
+      "module": "measurement",
+      "group": "边界",
+      "findings_text": "左肺上叶见6mm结节。",
+      "impression_text": "右肺上叶见16mm结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "尺寸要求同侧，不把侧别问题改称尺寸错误。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "M-10",
+      "module": "measurement",
+      "group": "边界",
+      "findings_text": "左肺上叶见结节。",
+      "impression_text": "左肺上叶结节6mm。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "缺少另一段尺寸。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "M-11",
+      "module": "measurement",
+      "group": "边界",
+      "findings_text": "左肺上叶结节较前6mm。",
+      "impression_text": "左肺上叶结节16mm。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "历史比较暂不支持，不能把前次值当本次单值。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "M-12",
+      "module": "measurement",
+      "group": "正常",
+      "findings_text": "右肺下叶见6毫米结节。",
+      "impression_text": "右肺下叶见0.6厘米结节。",
+      "expected_statuses": [
+        "pass"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "中文单位归一后相等。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "A-01",
+      "module": "assertion",
+      "group": "明确冲突",
+      "findings_text": "左肺下叶见结节。",
+      "impression_text": "左肺下叶未见结节。",
+      "expected_statuses": [
+        "needs_review"
+      ],
+      "expected_issue_count": 1,
+      "label_reason": "同侧同位置同对象明确有/无相反。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "A-02",
+      "module": "assertion",
+      "group": "明确冲突",
+      "findings_text": "右肺上叶无炎性改变。",
+      "impression_text": "右肺上叶见炎性改变。",
+      "expected_statuses": [
+        "needs_review"
+      ],
+      "expected_issue_count": 1,
+      "label_reason": "两段顺序颠倒也要发现有无相反。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "A-03",
+      "module": "assertion",
+      "group": "正常",
+      "findings_text": "右肺下叶未见结节。",
+      "impression_text": "右肺下叶无结节。",
+      "expected_statuses": [
+        "pass"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "明确否定一致，可比较不应报警。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "A-04",
+      "module": "assertion",
+      "group": "正常",
+      "findings_text": "左肺上叶见炎性改变。",
+      "impression_text": "左肺上叶炎性改变。",
+      "expected_statuses": [
+        "pass"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "明确存在一致。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "A-05",
+      "module": "assertion",
+      "group": "明确冲突",
+      "findings_text": "左肺上叶这枚结节不存在。",
+      "impression_text": "左肺上叶可见一枚结节。",
+      "expected_statuses": [
+        "needs_review"
+      ],
+      "expected_issue_count": 1,
+      "label_reason": "完整对象后不存在与可见相反。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "A-06",
+      "module": "assertion",
+      "group": "边界",
+      "findings_text": "左肺上叶可能未见结节。",
+      "impression_text": "左肺上叶未见结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "模糊表达不作为明确肯否。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "A-07",
+      "module": "assertion",
+      "group": "边界",
+      "findings_text": "左肺上叶不能排除未见结节。",
+      "impression_text": "左肺上叶见结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "复杂否定不强判。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "A-08",
+      "module": "assertion",
+      "group": "稳定性反例",
+      "findings_text": "左肺上叶结节没有增大。",
+      "impression_text": "左肺上叶结节稳定。",
+      "expected_statuses": [
+        "pass",
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "稳定性不等于不存在；状态可随抽取范围不同，必须不制造肯否冲突。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "A-09",
+      "module": "assertion",
+      "group": "边界",
+      "findings_text": "左肺上叶见结节。",
+      "impression_text": "右肺上叶未见结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "不同侧的有无不直接相互矛盾。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "A-10",
+      "module": "assertion",
+      "group": "边界",
+      "findings_text": "左肺上叶见结节。左肺上叶未见结节。",
+      "impression_text": "左肺上叶见结节。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "同位置同对象多次描述不能唯一对应。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "A-11",
+      "module": "assertion",
+      "group": "边界",
+      "findings_text": "左肺下叶见结节。",
+      "impression_text": "左肺下叶未见炎性改变。",
+      "expected_statuses": [
+        "unable_to_check"
+      ],
+      "expected_issue_count": 0,
+      "label_reason": "不同对象的肯否不比较。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    },
+    {
+      "id": "A-12",
+      "module": "assertion",
+      "group": "待标注探索",
+      "findings_text": "左肺上叶既往结节此次未见残留。",
+      "impression_text": "左肺上叶结节已消失。",
+      "expected_statuses": null,
+      "expected_issue_count": null,
+      "label_reason": "涉及时间与复杂消失表达，未有领域标注，先观察不计分。",
+      "label_source": "AI按既定文本契约拟定，待本人/领域评审；非临床真值"
+    }
+  ]
+}

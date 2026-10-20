@@ -1,0 +1,371 @@
+{
+  "version": "报告质控-公开发布副本-2026-10-20-v0.7",
+  "status": "local_unpublished_candidate",
+  "model_requests_during_build": 0,
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "75e643f0175af30ffe5b86ad74a9c40965d28bca9a3f3030ea8a2e9333617ddf",
+      "bytes": 6443,
+      "source": "06_交付与试用/作品展示包源稿/README.md",
+      "source_sha256": "75e643f0175af30ffe5b86ad74a9c40965d28bca9a3f3030ea8a2e9333617ddf",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "LICENSE_STATUS.md",
+      "sha256": "b3203b198d5977cbbc8a20b191a415b6a8b2261321144adfa3e5d6ed5a9a2234",
+      "bytes": 383,
+      "source": "06_交付与试用/作品展示包源稿/LICENSE_STATUS.md",
+      "source_sha256": "b3203b198d5977cbbc8a20b191a415b6a8b2261321144adfa3e5d6ed5a9a2234",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "docs/PRODUCT_SPEC.md",
+      "sha256": "3b92437ff297ffd9589fe5afc45e350de56ed52e601c56db565c429041405c54",
+      "bytes": 4034,
+      "source": "06_交付与试用/作品展示包源稿/docs/PRODUCT_SPEC.md",
+      "source_sha256": "3b92437ff297ffd9589fe5afc45e350de56ed52e601c56db565c429041405c54",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "docs/AI_DESIGN.md",
+      "sha256": "732e06bb3a34f63a05cae4c41ae4d4c9c6aed1711d103f429c7ee55b0fa0dd3a",
+      "bytes": 3376,
+      "source": "06_交付与试用/作品展示包源稿/docs/AI_DESIGN.md",
+      "source_sha256": "732e06bb3a34f63a05cae4c41ae4d4c9c6aed1711d103f429c7ee55b0fa0dd3a",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "docs/ACCEPTANCE.md",
+      "sha256": "1419e08595114d2ca714bc623be5174ad8b097b4a258d59cdb568bf66668776f",
+      "bytes": 5881,
+      "source": "06_交付与试用/作品展示包源稿/docs/ACCEPTANCE.md",
+      "source_sha256": "1419e08595114d2ca714bc623be5174ad8b097b4a258d59cdb568bf66668776f",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "docs/INTERVIEW_CASE.md",
+      "sha256": "93b698de2fa9a108dc4c88ae1ed66c8679140baef9a0c8dff85052223955f3f2",
+      "bytes": 2769,
+      "source": "06_交付与试用/作品展示包源稿/docs/INTERVIEW_CASE.md",
+      "source_sha256": "93b698de2fa9a108dc4c88ae1ed66c8679140baef9a0c8dff85052223955f3f2",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/web_app.py",
+      "sha256": "9b863889f2457626cfbe49a03b5d68809ce54cd9922a6403b8234b392daaf546",
+      "bytes": 15178,
+      "source": "04_研发实现/web_app.py",
+      "source_sha256": "9b863889f2457626cfbe49a03b5d68809ce54cd9922a6403b8234b392daaf546",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/run_acceptance.py",
+      "sha256": "fc753d1c114335c99c00c7d1ca552b752a6c3fe9e6501c93d607767c4b24976f",
+      "bytes": 6462,
+      "source": "04_研发实现/run_acceptance.py",
+      "source_sha256": "fc753d1c114335c99c00c7d1ca552b752a6c3fe9e6501c93d607767c4b24976f",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/src/__init__.py",
+      "sha256": "9d04d1c45c2efd337fcfb3e22960a4a1f7f4f4d9400e47e07f50160d22fc0e5a",
+      "bytes": 50,
+      "source": "04_研发实现/src/__init__.py",
+      "source_sha256": "9d04d1c45c2efd337fcfb3e22960a4a1f7f4f4d9400e47e07f50160d22fc0e5a",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/src/laterality_checker.py",
+      "sha256": "a9ae8f72d1c605d4d18271be6db98cea39e0cea7fe9fdf9a37172c0438741c36",
+      "bytes": 6029,
+      "source": "04_研发实现/src/laterality_checker.py",
+      "source_sha256": "a9ae8f72d1c605d4d18271be6db98cea39e0cea7fe9fdf9a37172c0438741c36",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/src/report_structure.py",
+      "sha256": "6a50b695e933d0afc57d62b403beec23c86b7e94038404088648b103e0a10d4e",
+      "bytes": 8800,
+      "source": "04_研发实现/src/report_structure.py",
+      "source_sha256": "6a50b695e933d0afc57d62b403beec23c86b7e94038404088648b103e0a10d4e",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/src/report_checker.py",
+      "sha256": "17302c823b6843f0a2f4c267abdfb61a10066fba8c5f868dcb2d6fd7749b7e66",
+      "bytes": 7662,
+      "source": "04_研发实现/src/report_checker.py",
+      "source_sha256": "17302c823b6843f0a2f4c267abdfb61a10066fba8c5f868dcb2d6fd7749b7e66",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/src/semantic_review.py",
+      "sha256": "f89d0414952627252c7c8bcc134a0ec0c130b001122b3db1cefedf93f90bc9f6",
+      "bytes": 6774,
+      "source": "04_研发实现/src/semantic_review.py",
+      "source_sha256": "f89d0414952627252c7c8bcc134a0ec0c130b001122b3db1cefedf93f90bc9f6",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/src/deepseek_client.py",
+      "sha256": "5e4ea6332ba51b97f957231f54e2621e21f4374cea987b67734c25590ed2239d",
+      "bytes": 9189,
+      "source": "04_研发实现/src/deepseek_client.py",
+      "source_sha256": "5e4ea6332ba51b97f957231f54e2621e21f4374cea987b67734c25590ed2239d",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/src/review_fusion.py",
+      "sha256": "a82efd5f9c8e7fb775c91270363a1d1975f2a48c3396c71c663c3e39743cd814",
+      "bytes": 10811,
+      "source": "04_研发实现/src/review_fusion.py",
+      "source_sha256": "a82efd5f9c8e7fb775c91270363a1d1975f2a48c3396c71c663c3e39743cd814",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/src/web_ai_service.py",
+      "sha256": "8a161d665f71edb74f8c5c9f2c2099b1673c43c57bcb8be5225ddba3b620bb36",
+      "bytes": 10743,
+      "source": "04_研发实现/src/web_ai_service.py",
+      "source_sha256": "8a161d665f71edb74f8c5c9f2c2099b1673c43c57bcb8be5225ddba3b620bb36",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/web/index.html",
+      "sha256": "5623a01b2d9d1385f4b128005ff0a2632d8efa7f8e7737c18bac3b9d8659020d",
+      "bytes": 12372,
+      "source": "04_研发实现/web/index.html",
+      "source_sha256": "5623a01b2d9d1385f4b128005ff0a2632d8efa7f8e7737c18bac3b9d8659020d",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/web/style.css",
+      "sha256": "571400f11cc10930da2cd8761e6f72cd5c39415534cf5c6a01a7aed140929027",
+      "bytes": 13960,
+      "source": "04_研发实现/web/style.css",
+      "source_sha256": "571400f11cc10930da2cd8761e6f72cd5c39415534cf5c6a01a7aed140929027",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/web/app.js",
+      "sha256": "82b912f7f6c24a59451394def927e2d7ec9c25bc209981ea758f78abce3a4f0f",
+      "bytes": 26272,
+      "source": "04_研发实现/web/app.js",
+      "source_sha256": "82b912f7f6c24a59451394def927e2d7ec9c25bc209981ea758f78abce3a4f0f",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/web/samples.js",
+      "sha256": "4d847bbc2cefe59b0454da99516626ecd7b989c519068a1072be9e9f9e10addb",
+      "bytes": 2073,
+      "source": "04_研发实现/web/samples.js",
+      "source_sha256": "4d847bbc2cefe59b0454da99516626ecd7b989c519068a1072be9e9f9e10addb",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/web/ui.js",
+      "sha256": "0eaf494f25a6826a55c044360744a9c9fb16b84b4a8243591abdc5fac3c6c673",
+      "bytes": 7060,
+      "source": "04_研发实现/web/ui.js",
+      "source_sha256": "0eaf494f25a6826a55c044360744a9c9fb16b84b4a8243591abdc5fac3c6c673",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/web/review.js",
+      "sha256": "f176cc9b1fd1d6768b97861adb20427e318e4e16785f17dd3c9985c9f16004d7",
+      "bytes": 8115,
+      "source": "04_研发实现/web/review.js",
+      "source_sha256": "f176cc9b1fd1d6768b97861adb20427e318e4e16785f17dd3c9985c9f16004d7",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/tests/test_acceptance.py",
+      "sha256": "3f211ff25c6f8286ead0f5a999f64da0d9d324e85ae770ac6cee96fca836c4df",
+      "bytes": 4951,
+      "source": "04_研发实现/tests/test_acceptance.py",
+      "source_sha256": "3f211ff25c6f8286ead0f5a999f64da0d9d324e85ae770ac6cee96fca836c4df",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/tests/test_assertion_checker.py",
+      "sha256": "1890b084358ae4f1644a0fb48c6d3555e3b81aedb4623a6582fcf5e81d824fe0",
+      "bytes": 3791,
+      "source": "04_研发实现/tests/test_assertion_checker.py",
+      "source_sha256": "1890b084358ae4f1644a0fb48c6d3555e3b81aedb4623a6582fcf5e81d824fe0",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/tests/test_deepseek_client.py",
+      "sha256": "e76975072e2f0040e030c7750fd0084483b5c49cd0c4858aa3dea086ee587466",
+      "bytes": 9726,
+      "source": "04_研发实现/tests/test_deepseek_client.py",
+      "source_sha256": "e76975072e2f0040e030c7750fd0084483b5c49cd0c4858aa3dea086ee587466",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/tests/test_laterality_checker.py",
+      "sha256": "580048dbf51d7afff3eabb716e55a292a36bfe487b135388aec2418aae03c32d",
+      "bytes": 4585,
+      "source": "04_研发实现/tests/test_laterality_checker.py",
+      "source_sha256": "580048dbf51d7afff3eabb716e55a292a36bfe487b135388aec2418aae03c32d",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/tests/test_product_materials.py",
+      "sha256": "884a2691a24636ef6973f7474fe13338ec3c0f95e8294b1a16fd3ffbaff3b938",
+      "bytes": 2409,
+      "source": "04_研发实现/tests/test_product_materials.py",
+      "source_sha256": "884a2691a24636ef6973f7474fe13338ec3c0f95e8294b1a16fd3ffbaff3b938",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/tests/test_report_checker.py",
+      "sha256": "00ba9c9df4b72a3191640faafd84865be4a560a25dd326f611bc6f4b658f3081",
+      "bytes": 6060,
+      "source": "04_研发实现/tests/test_report_checker.py",
+      "source_sha256": "00ba9c9df4b72a3191640faafd84865be4a560a25dd326f611bc6f4b658f3081",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/tests/test_report_structure.py",
+      "sha256": "2044754a11495374106add51cf6f1f6cd9f7c0a84bb09d7408c5e0b26bf95e7d",
+      "bytes": 4075,
+      "source": "04_研发实现/tests/test_report_structure.py",
+      "source_sha256": "2044754a11495374106add51cf6f1f6cd9f7c0a84bb09d7408c5e0b26bf95e7d",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/tests/test_review_fusion.py",
+      "sha256": "469f69830117744a420c76dcd5b35a636207607947dc2187732082b05a829623",
+      "bytes": 12166,
+      "source": "04_研发实现/tests/test_review_fusion.py",
+      "source_sha256": "469f69830117744a420c76dcd5b35a636207607947dc2187732082b05a829623",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/tests/test_rule_expansion.py",
+      "sha256": "5f2548e6f61cd06443afc79c17b27d05077e81c26feffc92da2946493196d504",
+      "bytes": 7449,
+      "source": "04_研发实现/tests/test_rule_expansion.py",
+      "source_sha256": "5f2548e6f61cd06443afc79c17b27d05077e81c26feffc92da2946493196d504",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/tests/test_semantic_review.py",
+      "sha256": "8d0b26980dc013330fef66f4dfbe841ab71d7eea69df56a940f82287e4a27e1b",
+      "bytes": 6705,
+      "source": "04_研发实现/tests/test_semantic_review.py",
+      "source_sha256": "8d0b26980dc013330fef66f4dfbe841ab71d7eea69df56a940f82287e4a27e1b",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/tests/test_web_ai_service.py",
+      "sha256": "b6c9de8ef588d69fa013a49e6e6d7b8e23b101dc217b49b402aeaff262cbc76e",
+      "bytes": 15031,
+      "source": "04_研发实现/tests/test_web_ai_service.py",
+      "source_sha256": "b6c9de8ef588d69fa013a49e6e6d7b8e23b101dc217b49b402aeaff262cbc76e",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/tests/test_web_api.py",
+      "sha256": "3be5d323345c268942d2b626ffa0595b46a9e694e5f40ee5536f42fb42452bc9",
+      "bytes": 1564,
+      "source": "04_研发实现/tests/test_web_api.py",
+      "source_sha256": "3be5d323345c268942d2b626ffa0595b46a9e694e5f40ee5536f42fb42452bc9",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/tests/test_team_regressions.py",
+      "sha256": "02a44e90e2556c08832eddf5d47b4f302ae4b2b485f5e46a0f9f0a0c96f38a82",
+      "bytes": 5065,
+      "source": "04_研发实现/tests/test_team_regressions.py",
+      "source_sha256": "02a44e90e2556c08832eddf5d47b4f302ae4b2b485f5e46a0f9f0a0c96f38a82",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/tests/test_review_session.mjs",
+      "sha256": "fdeefd7fad16c0ddda55d0f7dce24fa885731e054e213b176c760fb93f0f0a78",
+      "bytes": 6926,
+      "source": "04_研发实现/tests/test_review_session.mjs",
+      "source_sha256": "fdeefd7fad16c0ddda55d0f7dce24fa885731e054e213b176c760fb93f0f0a78",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/tests/test_ux_export.mjs",
+      "sha256": "40972ca04431e960f6e130a84c95b8628363a3838793fa7f2687d7014f018f1b",
+      "bytes": 12281,
+      "source": "04_研发实现/tests/test_ux_export.mjs",
+      "source_sha256": "40972ca04431e960f6e130a84c95b8628363a3838793fa7f2687d7014f018f1b",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "05_测试与评测/18_三规则冻结验收集-v0.1.json",
+      "sha256": "8019ea592886331d2a4a7815d5e8aa2055f42f2e843a2d060e6ee436406ad374",
+      "bytes": 17469,
+      "source": "05_测试与评测/18_三规则冻结验收集-v0.1.json",
+      "source_sha256": "8019ea592886331d2a4a7815d5e8aa2055f42f2e843a2d060e6ee436406ad374",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "05_测试与评测/19_三规则冻结验收结果-2026-10-18.json",
+      "sha256": "d2266de3021bd091dd709fe8a78112dd71f7f3aafe33fd869b181653913e4230",
+      "bytes": 103639,
+      "source": "05_测试与评测/19_三规则冻结验收结果-2026-10-18.json",
+      "source_sha256": "d2266de3021bd091dd709fe8a78112dd71f7f3aafe33fd869b181653913e4230",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "05_测试与评测/21_三规则团队复查后冻结验收结果-2026-10-18.json",
+      "sha256": "14f5f8777d65233fac0aeca08ee7c4bf6e8545577e63c30ab489ccc1f4ef436c",
+      "bytes": 107014,
+      "source": "05_测试与评测/21_三规则团队复查后冻结验收结果-2026-10-18.json",
+      "source_sha256": "14f5f8777d65233fac0aeca08ee7c4bf6e8545577e63c30ab489ccc1f4ef436c",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "assets/product-process.svg",
+      "sha256": "42a8ddcfc64395978a179b202a262c927f1313960d134942b96bb00368cad32e",
+      "bytes": 3743,
+      "source": "00_项目治理/07_流程图_产品经理与AI协作证据链-v1.0.svg",
+      "source_sha256": "42a8ddcfc64395978a179b202a262c927f1313960d134942b96bb00368cad32e",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "assets/check-workflow.svg",
+      "sha256": "8372de751a2fac17dadb2390003a72d9a02b2481023622c0878998db24245dc0",
+      "bytes": 3254,
+      "source": "03_AI方案与工作流/02_流程图_三模块报告人工复核-v1.2.svg",
+      "source_sha256": "8372de751a2fac17dadb2390003a72d9a02b2481023622c0878998db24245dc0",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "public_data/evaluation.json",
+      "sha256": "b0d2c78889376da4e9940ad435c9fc565ac002410c01aba3bebf09f9d468d959",
+      "bytes": 679,
+      "transform": "generated_safe_field_allowlist"
+    },
+    {
+      "path": "public_data/model_pilot.json",
+      "sha256": "fd84be403011ab945a9d7ebd909b9d742d885b43ee4ee2ba5520a34ca04ebbbc",
+      "bytes": 4020,
+      "transform": "generated_safe_field_allowlist"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "a922290c286608573d5bbf687ff175eebb955c609ace4474d9097dbdf18472db",
+      "bytes": 64,
+      "transform": "generated_safe_field_allowlist"
+    }
+  ],
+  "exclusions": [
+    "个人档案",
+    "课程原件",
+    "公司PPT/PDF",
+    "真实患者资料",
+    "密钥",
+    "虚拟环境",
+    "模型调用原始记录"
+  ],
+  "caveat": "允许清单候选包，不代表本人已掌握、公开许可、临床验收或已上线。"
+}

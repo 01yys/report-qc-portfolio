@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>报告质控｜文本一致性检查与评测工作台</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <svg class="icon-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-report" viewBox="0 0 24 24"><path d="M7 3h8l4 4v14H5V3h2Zm8 0v5h4M8 12h8M8 16h8"/></symbol>
+    <symbol id="icon-history" viewBox="0 0 24 24"><path d="M4 6v5h5M4 11a8 8 0 1 1 2 7M12 7v5l3 2"/></symbol>
+    <symbol id="icon-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 18v3h16v-3"/></symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 10v7M12 6v1"/></symbol>
+  </svg>
+  <header class="app-header">
+    <h1>报告质控</h1><p class="app-subtitle">文本一致性检查与评测工作台</p>
+    <span class="demo-label">合成案例演示</span>
+  </header>
+  <div class="app-shell">
+    <nav class="side-nav" aria-label="主要页面">
+      <button class="nav-button active" data-view="workspace" aria-current="page"><svg class="icon"><use href="#icon-report"/></svg>检查工作台</button>
+      <button class="nav-button" data-view="records"><svg class="icon"><use href="#icon-history"/></svg>案例与记录</button>
+      <button class="nav-button" data-view="review"><svg class="icon"><use href="#icon-report"/></svg>复核管理</button>
+      <button class="nav-button" data-view="evaluation"><svg class="icon"><use href="#icon-chart"/></svg>评测与说明</button>
+      <button class="nav-button" data-view="process"><svg class="icon"><use href="#icon-report"/></svg>产品过程</button>
+    </nav>
+    <main class="main-content">
+      <section id="workspace-view" class="view" aria-label="检查工作台">
+        <div class="workspace-grid">
+          <section class="panel input-panel" aria-labelledby="input-title">
+            <h2 id="input-title">报告输入</h2>
+            <label for="sample-select" class="field-title">选择模拟案例</label>
+            <select id="sample-select"><option value="">请选择合成案例，或输入模拟文本</option></select>
+            <label for="findings-text" class="field-title">影像所见</label>
+            <textarea id="findings-text" maxlength="20000" placeholder="例如：左肺上叶见 8 mm 结节。" spellcheck="false"></textarea>
+            <label for="impression-text" class="field-title">诊断意见</label>
+            <textarea id="impression-text" maxlength="20000" placeholder="例如：左肺上叶见 0.8 cm 结节。" spellcheck="false"></textarea>
+            <fieldset class="module-fieldset"><legend>检查模块</legend>
+              <div class="module-options">
+                <label><input type="checkbox" value="laterality" checked />侧别与部位</label>
+                <label><input type="checkbox" value="measurement" checked />尺寸与单位</label>
+                <label><input type="checkbox" value="assertion" checked />肯定与否定</label>
+              </div>
+            </fieldset>
+            <div class="input-actions"><button id="check-button" class="button primary" disabled>开始检查</button><button id="clear-button" class="button">清空</button></div>
+          </section>
+          <section class="panel result-panel" aria-labelledby="result-title">
+            <h2 id="result-title">检查结果</h2>
+            <div id="result-content" aria-live="polite"><div class="empty-state"><svg class="icon"><use href="#icon-report"/></svg><p>填写两段模拟文本后，点击“开始检查”。</p><small>规则先检查，AI需另行主动确认；不自动发送报告。</small></div></div>
+            <section class="ai-panel" aria-labelledby="ai-title">
+              <h3 id="ai-title">可选 AI 语义复核</h3>
+              <p id="ai-capability" class="muted">正在核对本机AI配置；规则检查不依赖AI。</p>
+              <p>先完成规则检查，再按需追加。AI独立复核两段文本，不限于所选规则，仍需人工核对。</p>
+              <label class="ai-consent"><input id="ai-consent" type="checkbox" />我确认仅含合成文本，并允许本次AI请求（可能扣费）</label>
+              <button id="ai-button" class="button" disabled>追加 AI 复核</button>
+              <p id="ai-status" role="status" aria-live="polite">未启用AI；不会自动发送报告。</p>
+            </section>
+            <div class="result-actions"><button id="export-button" class="button" disabled><svg class="icon"><use href="#icon-download"/></svg>导出检查结果</button><span>人工修改后，重新检查以查看变化。</span></div>
+          </section>
+        </div>
+      </section>
+      <section id="records-view" class="view panel secondary-panel" aria-labelledby="records-title" hidden>
+        <h2 id="records-title">案例与记录</h2><p class="muted">合成案例用于体验功能；检查记录仅在当前页面内存中保存，刷新即清除。</p>
+        <h3>合成案例</h3><div id="sample-list" class="sample-list"></div>
+        <div class="section-heading"><h3>本次会话记录</h3><button id="clear-history-button" class="button small">清除会话记录</button></div>
+        <div id="history-list"></div>
+      </section>
+      <section id="review-view" class="view panel secondary-panel" aria-labelledby="review-title" hidden>
+        <div class="section-heading"><h2 id="review-title">本次会话复核管理</h2><button id="export-session-button" class="button" disabled>导出会话快照</button></div>
+        <p class="muted">仅统计当前页面保留的最近 12 次检查。复检也算一次运行，不代表 12 份独立报告；刷新或清除记录后统计归零。</p>
+        <div id="session-summary" class="session-summary" aria-live="polite"></div>
+        <details class="coverage"><summary>统计口径与使用边界</summary><ul>
+          <li>检查次数按运行计数；提示项按每次运行中的问题卡计数，同一问题复检后可重复计入。</li>
+          <li>待核对、已核对、提示不准确是用户反馈状态，不是疾病结论或已修复状态。</li>
+          <li>“未发现不一致”只表示已选规则的可比较内容；无法检查的运行另计，不当作通过。</li>
+          <li>下面的筛选只改变列表，不改变全会话统计。没有医生、医院或真实临床效果数据。</li>
+        </ul></details>
+        <div class="review-filters"><label for="review-module">问题类别<select id="review-module"><option value="all">全部类别</option><option value="laterality">侧别与部位</option><option value="measurement">尺寸与单位</option><option value="assertion">肯定与否定</option><option value="semantic">其他语义候选</option></select></label>
+          <label for="review-state">反馈状态<select id="review-state"><option value="all">全部状态</option><option value="pending">待核对</option><option value="reviewed">已核对</option><option value="inaccurate">提示不准确</option></select></label></div>
+        <p id="review-match-count" class="muted" aria-live="polite"></p><div id="review-list"></div>
+      </section>
+      <section id="evaluation-view" class="view panel secondary-panel" aria-labelledby="evaluation-title" hidden>
+        <h2 id="evaluation-title">评测与说明</h2>
+        <p class="muted">以下数据来自项目实际合成评测文件，不是医院效果或临床准确率。</p>
+        <div id="evaluation-content" aria-live="polite"></div>
+        <h3>本版覆盖范围</h3><ul class="scope-list">
+          <li>支持肺上叶、肺中叶、肺下叶的明确单对象：结节、炎性改变。</li>
+          <li>尺寸比较同侧同部位同对象的单值 mm/cm/毫米/厘米，8 毫米等于 0.8 厘米；近似、范围、多径及历史变化暂不支持。</li>
+          <li>肯否比较明确存在与明确否定，支持“这枚结节不存在”这种完整表达；“可能不存在”“不存在增大”等不硬判为病灶不存在。</li>
+          <li>多个病灶、双侧、部分部位换写法与复杂长句仍有限制；可选AI也不保证完整覆盖。</li>
+          <li>反馈只记录用户对提示的看法，不自动改规则、不充当专家标签。</li>
+        </ul>
+      </section>
+      <section id="process-view" class="view panel secondary-panel" aria-labelledby="process-title" hidden>
+        <h2 id="process-title">从 0 到 MVP 的产品过程</h2>
+        <p class="muted">独立个人项目，AI 辅助实现。展示真实产物与取舍；未做医师访谈、医院上线或商业效果验证。</p>
+        <div class="process-actions"><a class="button" href="/docs/prd" target="_blank" rel="noopener">查看 PRD 与交互规格</a><a class="button" href="/docs/rag" target="_blank" rel="noopener">查看 RAG 方案（待实现）</a><a class="button" href="/docs/review" target="_blank" rel="noopener">查看本轮交付与验收</a></div>
+        <img class="process-diagram" src="/assets/product-process.svg" alt="产品过程：问题假设、产品定义、流程原型、AI协作、验收迭代、交付复盘，真实用户验证与公开发布待完成" />
+        <div class="process-row"><h3>01 问题与用户任务</h3><p>观察影像科报告撰写与人工审核流程，提出提交前文本自检假设。本人提供场景，AI 协助整理；未把行业观察包装成已验证需求。</p><p class="muted">输入：场景观察。产出：任务地图、人工流程。决策：访谈暂缓，医疗价值保留待验证。</p></div>
+        <div class="process-row"><h3>02 产品定义与优先级</h3><p>将求职作品目的转为有限但完整的任务闭环。优先做侧别、尺寸、肯否三类可解释问题；模型语义复核为下一能力，不扩成医院平台。</p><p class="muted">产出：范围、非目标、版本计划、验收例。本人已确认选题和目标，细节需回来操作评审。</p></div>
+        <div class="process-row"><h3>03 流程、PRD 与原型</h3><p>先定义输入、输出、边界和状态，再做双输入、问题证据、人工复检与导出。需求、原型、实现与测试使用同一功能编号追踪。</p><p class="muted">产出：PRD/交互规格、工作流图、视觉原型。不是先生成页面再编造需求故事。</p><a href="/assets/check-workflow.svg" target="_blank" rel="noopener">打开实际复核流程图</a></div>
+        <div class="process-row"><h3>04 AI 方案与开发协作</h3><p>明确表达用规则保持可解释，复杂语义比较模型收益；查询资料依据才评估 RAG。AI 辅助代码与文档，本人需要理解关键取舍并验收，不声称独立手写全栈。</p><p class="muted">现状：三规则可运行，v1.3补中文单位和对象后否定。已完成命令行六例真实开发对照；网页支持先规则、再手动追加AI，需本机配置凭据。模拟联调不等于真实模型效果；Embedding与完整RAG未实现。旧流程图按原日期阅读。</p></div>
+        <div class="process-row"><h3>05 验收、反馈与迭代</h3><p>正常、单错、多错、歧义、修改复检与失败恢复都要验证。反馈保留但不直接当专家标签；既有左右评测保留改动前后快照。</p><p class="muted">技术与浏览器验收已开展；本人操作、非临床体验者反馈和保留集评测还需补。</p></div>
+        <div class="process-row"><h3>06 交付与复盘</h3><p>当前交付为本机可操作MVP与证据链；准备可复现的本地展示候选包，不等于已发布GitHub或公网演示。实际发布后再补真实链接。</p><p class="muted">未发布不写上线，个人项目不冒充雇主商业研发或医院实施经历。</p></div>
+      </section>
+      <footer class="boundary"><svg class="icon"><use href="#icon-info"/></svg><span>仅检查文本一致性，不能替代医师审核。请使用合成文本，不输入真实患者信息。</span></footer>
+    </main>
+  </div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
