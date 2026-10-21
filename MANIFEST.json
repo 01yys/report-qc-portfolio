@@ -1,6 +1,6 @@
 {
   "version": "报告质控-公开发布副本-2026-10-21-v0.9",
-  "status": "local_unpublished_candidate",
+  "status": "allowlisted_snapshot",
   "model_requests_during_build": 0,
   "files": [
     {
