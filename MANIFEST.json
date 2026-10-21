@@ -1,14 +1,14 @@
 {
-  "version": "报告质控-公开发布副本-2026-10-21-v0.8",
+  "version": "报告质控-公开发布副本-2026-10-21-v0.9",
   "status": "local_unpublished_candidate",
   "model_requests_during_build": 0,
   "files": [
     {
       "path": "README.md",
-      "sha256": "f6656aba1798e375a7a9ed2e1d07e979b64520cf94ec339c1192f7d1ff7c63bb",
-      "bytes": 6970,
+      "sha256": "574cfcba411f8c15012a5f00ad513731657f91372518be762c1731211ffcb8ed",
+      "bytes": 7149,
       "source": "06_交付与试用/作品展示包源稿/README.md",
-      "source_sha256": "f6656aba1798e375a7a9ed2e1d07e979b64520cf94ec339c1192f7d1ff7c63bb",
+      "source_sha256": "574cfcba411f8c15012a5f00ad513731657f91372518be762c1731211ffcb8ed",
       "transform": "exact_copy"
     },
     {
@@ -29,10 +29,18 @@
     },
     {
       "path": "docs/AI_DESIGN.md",
-      "sha256": "732e06bb3a34f63a05cae4c41ae4d4c9c6aed1711d103f429c7ee55b0fa0dd3a",
-      "bytes": 3376,
+      "sha256": "89aaba88733e919547bafc18d5f19a80269978d2820b637ee61e8e97aff73743",
+      "bytes": 3645,
       "source": "06_交付与试用/作品展示包源稿/docs/AI_DESIGN.md",
-      "source_sha256": "732e06bb3a34f63a05cae4c41ae4d4c9c6aed1711d103f429c7ee55b0fa0dd3a",
+      "source_sha256": "89aaba88733e919547bafc18d5f19a80269978d2820b637ee61e8e97aff73743",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "docs/AI_TECH_DECISIONS.md",
+      "sha256": "24e5f82a9952f953c3216578bb3205823a745ed55905a23a0603591a5c84407c",
+      "bytes": 4826,
+      "source": "06_交付与试用/作品展示包源稿/docs/AI_TECH_DECISIONS.md",
+      "source_sha256": "24e5f82a9952f953c3216578bb3205823a745ed55905a23a0603591a5c84407c",
       "transform": "exact_copy"
     },
     {
@@ -45,10 +53,10 @@
     },
     {
       "path": "docs/PROJECT_OVERVIEW.md",
-      "sha256": "56162da9aa8adc378e3675502eeee8930fecb65ba6b3dc872f4c1058bc000ee0",
-      "bytes": 3947,
+      "sha256": "2cdd5ecaf06ffde7646db9339444829dbad2e3e56e6ac93e3bc72dad88c98a1f",
+      "bytes": 4126,
       "source": "06_交付与试用/作品展示包源稿/docs/PROJECT_OVERVIEW.md",
-      "source_sha256": "56162da9aa8adc378e3675502eeee8930fecb65ba6b3dc872f4c1058bc000ee0",
+      "source_sha256": "2cdd5ecaf06ffde7646db9339444829dbad2e3e56e6ac93e3bc72dad88c98a1f",
       "transform": "exact_copy"
     },
     {
