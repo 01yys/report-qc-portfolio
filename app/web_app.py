@@ -29,16 +29,17 @@ WEB_DIRECTORY = Path(__file__).parent / "web"
 EVALUATION_DIRECTORY = Path(__file__).parent.parent / "05_测试与评测"
 PROJECT_DIRECTORY = Path(__file__).parent.parent
 DOCUMENTS = {
-    "/docs/prd": "02_产品定义与设计/03_求职展示版需求与交互规格-v1.0.md",
-    "/docs/rag": "03_AI方案与工作流/02_RAG方案评审-资料依据解释-v0.1.md",
-    "/docs/review": "06_交付与试用/03_离家期间交付与返回验收-2026-10-14.md",
+    "/docs/prd": "docs/PRODUCT_SPEC.md",
+    "/docs/rag": "docs/AI_DESIGN.md",
+    "/docs/review": "docs/ACCEPTANCE.md",
+    "/docs/case": "docs/PROJECT_OVERVIEW.md",
 }
 ASSETS = {
-    "/assets/product-process.svg": "00_项目治理/07_流程图_产品经理与AI协作证据链-v1.0.svg",
+    "/assets/product-process.svg": "00_项目治理/07_流程图_报告质控项目构建流程-v1.1.svg",
     "/assets/check-workflow.svg": "03_AI方案与工作流/02_流程图_三模块报告人工复核-v1.2.svg",
 }
 PUBLIC_DOCUMENTS = {"/docs/prd": "docs/PRODUCT_SPEC.md", "/docs/rag": "docs/AI_DESIGN.md",
-                    "/docs/review": "docs/ACCEPTANCE.md", "/docs/case": "docs/INTERVIEW_CASE.md"}
+                    "/docs/review": "docs/ACCEPTANCE.md", "/docs/case": "docs/PROJECT_OVERVIEW.md"}
 
 
 def material_path(route, internal):
@@ -97,7 +98,7 @@ class ReportQcHandler(BaseHTTPRequestHandler):
                 return
             self._send_json(HTTPStatus.OK, self.server.ai_service.capabilities())
             return
-        if self.path in DOCUMENTS or self.path == "/docs/case" and (PROJECT_DIRECTORY / "docs/INTERVIEW_CASE.md").is_file():
+        if self.path in DOCUMENTS:
             try:
                 source = material_path(self.path, DOCUMENTS.get(self.path, "__not_public__")).read_text(encoding="utf-8")
             except OSError:

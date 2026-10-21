@@ -1,14 +1,14 @@
 {
-  "version": "报告质控-公开发布副本-2026-10-20-v0.7",
+  "version": "报告质控-公开发布副本-2026-10-21-v0.8",
   "status": "local_unpublished_candidate",
   "model_requests_during_build": 0,
   "files": [
     {
       "path": "README.md",
-      "sha256": "75e643f0175af30ffe5b86ad74a9c40965d28bca9a3f3030ea8a2e9333617ddf",
-      "bytes": 6443,
+      "sha256": "f6656aba1798e375a7a9ed2e1d07e979b64520cf94ec339c1192f7d1ff7c63bb",
+      "bytes": 6970,
       "source": "06_交付与试用/作品展示包源稿/README.md",
-      "source_sha256": "75e643f0175af30ffe5b86ad74a9c40965d28bca9a3f3030ea8a2e9333617ddf",
+      "source_sha256": "f6656aba1798e375a7a9ed2e1d07e979b64520cf94ec339c1192f7d1ff7c63bb",
       "transform": "exact_copy"
     },
     {
@@ -21,10 +21,10 @@
     },
     {
       "path": "docs/PRODUCT_SPEC.md",
-      "sha256": "3b92437ff297ffd9589fe5afc45e350de56ed52e601c56db565c429041405c54",
-      "bytes": 4034,
+      "sha256": "647c8d90da246a8def8b624777014df7184de3a40b926a142cd653909ea22ddb",
+      "bytes": 3920,
       "source": "06_交付与试用/作品展示包源稿/docs/PRODUCT_SPEC.md",
-      "source_sha256": "3b92437ff297ffd9589fe5afc45e350de56ed52e601c56db565c429041405c54",
+      "source_sha256": "647c8d90da246a8def8b624777014df7184de3a40b926a142cd653909ea22ddb",
       "transform": "exact_copy"
     },
     {
@@ -37,27 +37,27 @@
     },
     {
       "path": "docs/ACCEPTANCE.md",
-      "sha256": "1419e08595114d2ca714bc623be5174ad8b097b4a258d59cdb568bf66668776f",
-      "bytes": 5881,
+      "sha256": "15cbce82302655c169608bce8c18d63067395ae867df3a7b7b6ed799d655f2cc",
+      "bytes": 5293,
       "source": "06_交付与试用/作品展示包源稿/docs/ACCEPTANCE.md",
-      "source_sha256": "1419e08595114d2ca714bc623be5174ad8b097b4a258d59cdb568bf66668776f",
+      "source_sha256": "15cbce82302655c169608bce8c18d63067395ae867df3a7b7b6ed799d655f2cc",
       "transform": "exact_copy"
     },
     {
-      "path": "docs/INTERVIEW_CASE.md",
-      "sha256": "93b698de2fa9a108dc4c88ae1ed66c8679140baef9a0c8dff85052223955f3f2",
-      "bytes": 2769,
-      "source": "06_交付与试用/作品展示包源稿/docs/INTERVIEW_CASE.md",
-      "source_sha256": "93b698de2fa9a108dc4c88ae1ed66c8679140baef9a0c8dff85052223955f3f2",
+      "path": "docs/PROJECT_OVERVIEW.md",
+      "sha256": "56162da9aa8adc378e3675502eeee8930fecb65ba6b3dc872f4c1058bc000ee0",
+      "bytes": 3947,
+      "source": "06_交付与试用/作品展示包源稿/docs/PROJECT_OVERVIEW.md",
+      "source_sha256": "56162da9aa8adc378e3675502eeee8930fecb65ba6b3dc872f4c1058bc000ee0",
       "transform": "exact_copy"
     },
     {
       "path": "app/web_app.py",
-      "sha256": "9b863889f2457626cfbe49a03b5d68809ce54cd9922a6403b8234b392daaf546",
-      "bytes": 15178,
+      "sha256": "6783c30ba933adcbc0b73c8695ee839cd2d999573181c537a1225239e04f8507",
+      "bytes": 14979,
       "source": "04_研发实现/web_app.py",
-      "source_sha256": "9b863889f2457626cfbe49a03b5d68809ce54cd9922a6403b8234b392daaf546",
-      "transform": "exact_copy"
+      "source_sha256": "17ee9dc52b4db686682b930a5c756f9dd7b16ca967928a51de4b578b6a2c011f",
+      "transform": "package_document_routes"
     },
     {
       "path": "app/run_acceptance.py",
@@ -93,10 +93,10 @@
     },
     {
       "path": "app/src/report_checker.py",
-      "sha256": "17302c823b6843f0a2f4c267abdfb61a10066fba8c5f868dcb2d6fd7749b7e66",
-      "bytes": 7662,
+      "sha256": "2e1c80ef407a8a8dbb4fd89a393907e303454ff4a54ca5f1b82ba477e0f1c657",
+      "bytes": 7668,
       "source": "04_研发实现/src/report_checker.py",
-      "source_sha256": "17302c823b6843f0a2f4c267abdfb61a10066fba8c5f868dcb2d6fd7749b7e66",
+      "source_sha256": "2e1c80ef407a8a8dbb4fd89a393907e303454ff4a54ca5f1b82ba477e0f1c657",
       "transform": "exact_copy"
     },
     {
@@ -133,10 +133,10 @@
     },
     {
       "path": "app/web/index.html",
-      "sha256": "5623a01b2d9d1385f4b128005ff0a2632d8efa7f8e7737c18bac3b9d8659020d",
-      "bytes": 12372,
+      "sha256": "59a75692293cc2af17dafb8fe0c2227aa1efe833f9b4344b259d7c0a374a53e8",
+      "bytes": 12034,
       "source": "04_研发实现/web/index.html",
-      "source_sha256": "5623a01b2d9d1385f4b128005ff0a2632d8efa7f8e7737c18bac3b9d8659020d",
+      "source_sha256": "59a75692293cc2af17dafb8fe0c2227aa1efe833f9b4344b259d7c0a374a53e8",
       "transform": "exact_copy"
     },
     {
@@ -181,10 +181,10 @@
     },
     {
       "path": "app/tests/test_acceptance.py",
-      "sha256": "3f211ff25c6f8286ead0f5a999f64da0d9d324e85ae770ac6cee96fca836c4df",
-      "bytes": 4951,
+      "sha256": "6b0eb9f985fa0ca9582e9c376a0122a259b300848a30eede353f9b8219bdd220",
+      "bytes": 5044,
       "source": "04_研发实现/tests/test_acceptance.py",
-      "source_sha256": "3f211ff25c6f8286ead0f5a999f64da0d9d324e85ae770ac6cee96fca836c4df",
+      "source_sha256": "6b0eb9f985fa0ca9582e9c376a0122a259b300848a30eede353f9b8219bdd220",
       "transform": "exact_copy"
     },
     {
@@ -325,10 +325,10 @@
     },
     {
       "path": "assets/product-process.svg",
-      "sha256": "42a8ddcfc64395978a179b202a262c927f1313960d134942b96bb00368cad32e",
-      "bytes": 3743,
-      "source": "00_项目治理/07_流程图_产品经理与AI协作证据链-v1.0.svg",
-      "source_sha256": "42a8ddcfc64395978a179b202a262c927f1313960d134942b96bb00368cad32e",
+      "sha256": "d1ac2dad661ab38156bbd6e7534fdac107b4f007cbe368d9c565fdca59d365fb",
+      "bytes": 3134,
+      "source": "00_项目治理/07_流程图_报告质控项目构建流程-v1.1.svg",
+      "source_sha256": "d1ac2dad661ab38156bbd6e7534fdac107b4f007cbe368d9c565fdca59d365fb",
       "transform": "exact_copy"
     },
     {
@@ -367,5 +367,5 @@
     "虚拟环境",
     "模型调用原始记录"
   ],
-  "caveat": "允许清单候选包，不代表本人已掌握、公开许可、临床验收或已上线。"
+  "caveat": "允许清单构建副本；许可、临床验收与应用部署状态见项目说明。"
 }

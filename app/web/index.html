@@ -94,16 +94,16 @@
         </ul>
       </section>
       <section id="process-view" class="view panel secondary-panel" aria-labelledby="process-title" hidden>
-        <h2 id="process-title">从 0 到 MVP 的产品过程</h2>
-        <p class="muted">独立个人项目，AI 辅助实现。展示真实产物与取舍；未做医师访谈、医院上线或商业效果验证。</p>
-        <div class="process-actions"><a class="button" href="/docs/prd" target="_blank" rel="noopener">查看 PRD 与交互规格</a><a class="button" href="/docs/rag" target="_blank" rel="noopener">查看 RAG 方案（待实现）</a><a class="button" href="/docs/review" target="_blank" rel="noopener">查看本轮交付与验收</a></div>
-        <img class="process-diagram" src="/assets/product-process.svg" alt="产品过程：问题假设、产品定义、流程原型、AI协作、验收迭代、交付复盘，真实用户验证与公开发布待完成" />
-        <div class="process-row"><h3>01 问题与用户任务</h3><p>观察影像科报告撰写与人工审核流程，提出提交前文本自检假设。本人提供场景，AI 协助整理；未把行业观察包装成已验证需求。</p><p class="muted">输入：场景观察。产出：任务地图、人工流程。决策：访谈暂缓，医疗价值保留待验证。</p></div>
-        <div class="process-row"><h3>02 产品定义与优先级</h3><p>将求职作品目的转为有限但完整的任务闭环。优先做侧别、尺寸、肯否三类可解释问题；模型语义复核为下一能力，不扩成医院平台。</p><p class="muted">产出：范围、非目标、版本计划、验收例。本人已确认选题和目标，细节需回来操作评审。</p></div>
-        <div class="process-row"><h3>03 流程、PRD 与原型</h3><p>先定义输入、输出、边界和状态，再做双输入、问题证据、人工复检与导出。需求、原型、实现与测试使用同一功能编号追踪。</p><p class="muted">产出：PRD/交互规格、工作流图、视觉原型。不是先生成页面再编造需求故事。</p><a href="/assets/check-workflow.svg" target="_blank" rel="noopener">打开实际复核流程图</a></div>
-        <div class="process-row"><h3>04 AI 方案与开发协作</h3><p>明确表达用规则保持可解释，复杂语义比较模型收益；查询资料依据才评估 RAG。AI 辅助代码与文档，本人需要理解关键取舍并验收，不声称独立手写全栈。</p><p class="muted">现状：三规则可运行，v1.3补中文单位和对象后否定。已完成命令行六例真实开发对照；网页支持先规则、再手动追加AI，需本机配置凭据。模拟联调不等于真实模型效果；Embedding与完整RAG未实现。旧流程图按原日期阅读。</p></div>
-        <div class="process-row"><h3>05 验收、反馈与迭代</h3><p>正常、单错、多错、歧义、修改复检与失败恢复都要验证。反馈保留但不直接当专家标签；既有左右评测保留改动前后快照。</p><p class="muted">技术与浏览器验收已开展；本人操作、非临床体验者反馈和保留集评测还需补。</p></div>
-        <div class="process-row"><h3>06 交付与复盘</h3><p>当前交付为本机可操作MVP与证据链；准备可复现的本地展示候选包，不等于已发布GitHub或公网演示。实际发布后再补真实链接。</p><p class="muted">未发布不写上线，个人项目不冒充雇主商业研发或医院实施经历。</p></div>
+        <h2 id="process-title">项目构建流程</h2>
+        <p class="muted">从问题定义、需求与交互设计，到规则和模型实现、合成案例验证与版本交付。</p>
+        <div class="process-actions"><a class="button" href="/docs/prd" target="_blank" rel="noopener">需求与交互规格</a><a class="button" href="/docs/rag" target="_blank" rel="noopener">规则与 AI 方案</a><a class="button" href="/docs/review" target="_blank" rel="noopener">验证结果与限制</a><a class="button" href="/docs/case" target="_blank" rel="noopener">项目设计与关键决策</a></div>
+        <img class="process-diagram" src="/assets/product-process.svg" alt="项目构建流程：问题定义、范围与规则、工作流与交互、规则与模型实现、验证迭代、版本交付" />
+        <div class="process-row"><h3>01 问题与用户任务</h3><p>围绕影像报告提交前自检，对比两段文本，定位可能不一致的表达并交由人工核对。场景来源为行业接触与工作流观察，尚未开展正式医生访谈或临床价值验证。</p></div>
+        <div class="process-row"><h3>02 范围与优先级</h3><p>先验证左右检查，再扩展侧别与明确部位、单值尺寸与单位、明确肯否三类规则，补齐修改复检、反馈和导出。复杂语义由可选 AI 提出候选，范围保持在文本一致性。</p></div>
+        <div class="process-row"><h3>03 工作流与交互设计</h3><p>定义输入、输出、检查范围和异常状态，再形成双文本输入、证据查看、人工修改、复检和结果管理流程。无提示、无法比较、AI 未执行与执行失败分别呈现。</p><a href="/assets/check-workflow.svg" target="_blank" rel="noopener">查看早期人工复核流程图</a><p class="muted">图中模型状态为历史设计，当前方案见规则与 AI 说明。</p></div>
+        <div class="process-row"><h3>04 规则与模型实现</h3><p>规则先返回结果，AI 由使用者主动追加。模型候选经过结构与原文证据校验，再按类别和证据区间保守融合；模型失败时保留规则结果。完整 RAG 与自主 Agent 未实现。</p></div>
+        <div class="process-row"><h3>05 验证与迭代</h3><p>采用冻结合成案例、自动化检查、真实模型开发对照和模拟页面验证。两例网页真实请求中，数量案例检出候选但分类错误，随后采用“类别待核对”策略，保留原始失败与分类信息。</p><p class="muted">合成预期和技术检查不构成临床准确率；外部独立评测仍待开展。</p></div>
+        <div class="process-row"><h3>06 版本交付</h3><p>代码、需求与设计、流程图、合成案例和验证说明已整理为独立公开仓库，核对构建清单与远端提交后发布。</p><a href="https://github.com/01yys/report-qc-portfolio" target="_blank" rel="noopener">GitHub 项目仓库</a><p class="muted">当前支持本机运行，未提供公网应用托管或医院部署。</p></div>
       </section>
       <footer class="boundary"><svg class="icon"><use href="#icon-info"/></svg><span>仅检查文本一致性，不能替代医师审核。请使用合成文本，不输入真实患者信息。</span></footer>
     </main>
