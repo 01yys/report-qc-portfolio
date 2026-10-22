@@ -21,6 +21,7 @@ from src.laterality_checker import check_laterality
 from src.report_checker import check_report
 from src.web_ai_service import WebAIService, RequestBudget, current_batch_date
 from src.deepseek_client import valid_key_transport_format
+from src.knowledge_assistant import KnowledgeService
 
 
 HOST = "127.0.0.1"
@@ -35,6 +36,7 @@ DOCUMENTS = {
     "/docs/case": "docs/PROJECT_OVERVIEW.md",
 }
 ASSETS = {
+    "/assets/knowledge-workflow.svg": "03_AI方案与工作流/04_流程图_知识助手RAG与Agent-v0.1.svg",
     "/assets/product-process.svg": "00_项目治理/07_流程图_报告质控项目构建流程-v1.1.svg",
     "/assets/check-workflow.svg": "03_AI方案与工作流/02_流程图_三模块报告人工复核-v1.2.svg",
 }
@@ -92,6 +94,13 @@ class ReportQcHandler(BaseHTTPRequestHandler):
     """提供页面、检查接口及允许清单中的产品材料。"""
 
     def do_GET(self) -> None:  # noqa: N802 - BaseHTTPRequestHandler 的固定方法名
+        if self.path == "/api/knowledge":
+            if self.headers.get("Host") != f"{HOST}:{self.server.server_port}":
+                self._send_json(HTTPStatus.FORBIDDEN, {"error": "仅允许本机固定地址访问。"})
+                return
+            service = getattr(self.server, "knowledge_service", None) or KnowledgeService()
+            self._send_json(HTTPStatus.OK, {**service.library.overview(), "ai":self.server.ai_service.capabilities()})
+            return
         if self.path == "/api/ai-capabilities":
             if self.headers.get("Host") != f"{HOST}:{self.server.server_port}":
                 self._send_json(HTTPStatus.FORBIDDEN, {"error": "仅允许本机固定地址访问。"})
@@ -132,7 +141,7 @@ class ReportQcHandler(BaseHTTPRequestHandler):
         if self.path == "/app.js":
             self._send_file("app.js", "application/javascript; charset=utf-8")
             return
-        if self.path in ("/samples.js", "/ui.js", "/review.js"):
+        if self.path in ("/samples.js", "/ui.js", "/review.js", "/knowledge.js"):
             self._send_file(self.path[1:], "application/javascript; charset=utf-8")
             return
         if self.path == "/favicon.ico":
@@ -142,18 +151,18 @@ class ReportQcHandler(BaseHTTPRequestHandler):
         self.send_error(HTTPStatus.NOT_FOUND, "Not found")
 
     def do_POST(self) -> None:  # noqa: N802 - BaseHTTPRequestHandler 的固定方法名
-        if self.path not in ("/api/check", "/api/check-v1", "/api/check-v2", "/api/ai-review"):
+        if self.path not in ("/api/check", "/api/check-v1", "/api/check-v2", "/api/ai-review", "/api/knowledge/query"):
             self.send_error(HTTPStatus.NOT_FOUND, "Not found")
             return
 
-        if self.path in ("/api/check-v2", "/api/ai-review"):
+        if self.path in ("/api/check-v2", "/api/ai-review", "/api/knowledge/query"):
             origin = f"http://{HOST}:{self.server.server_port}"
             if (self.headers.get("Host") != f"{HOST}:{self.server.server_port}" or
                     self.headers.get("Origin") != origin or
                     self.headers.get("Content-Type", "").split(";")[0].strip() != "application/json"):
                 self._send_json(HTTPStatus.FORBIDDEN, {"error": "仅接受本机同源JSON请求。"})
                 return
-            if self.path == "/api/ai-review" and self.headers.get("X-QC-Token") != self.server.ai_service.csrf:
+            if self.path in ("/api/ai-review", "/api/knowledge/query") and self.headers.get("X-QC-Token") != self.server.ai_service.csrf:
                 self._send_json(HTTPStatus.FORBIDDEN, {"error": "本机会话验证失败；未请求模型，请刷新页面。"})
                 return
 
@@ -175,6 +184,13 @@ class ReportQcHandler(BaseHTTPRequestHandler):
             )
             return
 
+        if self.path == "/api/knowledge/query":
+            try:
+                service = getattr(self.server, "knowledge_service", None) or KnowledgeService()
+                self._send_json(HTTPStatus.OK, service.query(payload))
+            except ValueError as exc:
+                self._send_json(HTTPStatus.BAD_REQUEST, {"error":str(exc)})
+            return
         if self.path == "/api/check-v2":
             try:
                 result = self.server.ai_service.check(payload)
@@ -270,6 +286,7 @@ def main() -> None:
             raise SystemExit("Key为空或格式不适合HTTP传输，未启动服务；不要发送Key到聊天。")
     server.ai_service = WebAIService(api_key=key,
         budget=budget, record_dir=records)
+    server.knowledge_service = KnowledgeService(api_key=key, budget=budget, record_dir=records)
     print(f"报告质控本机工作台已启动： http://{HOST}:{PORT}")
     print("按 Ctrl+C 停止服务。")
     try:

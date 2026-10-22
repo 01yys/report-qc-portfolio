@@ -1,6 +1,7 @@
 import { samples, moduleLabels } from "/samples.js";
 import { escapeHtml, renderResult, emptyState } from "/ui.js";
 import { HISTORY_LIMIT, reviewLabels, reviewRows, summarizeSession, filterReviewRows, sourceLabel, comparableRuns, taskTitle, exportResult } from "/review.js";
+import { initKnowledgeAssistant } from "/knowledge.js";
 
 const findingsInput = document.querySelector("#findings-text");
 const impressionInput = document.querySelector("#impression-text");
@@ -59,6 +60,7 @@ function showView(view) {
   if (view === "records") renderHistory();
   if (view === "review") renderReview();
   if (view === "evaluation" && !evaluationLoaded) loadEvaluation();
+  if (view === "knowledge") initKnowledgeAssistant();
   window.scrollTo(0, 0);
 }
 function loadSample(id) {

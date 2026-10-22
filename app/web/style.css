@@ -147,3 +147,18 @@ mark { color: inherit; background: #ffc7ca; border-radius: 2px; padding: 2px 3px
 #evaluation-content { min-width: 0; overflow-wrap: anywhere; }
 .acceptance-case summary { cursor: pointer; font-weight: 600; }
 .acceptance-case p { margin: 6px 0; }
+/* 知识助手沿用报告工作台的输入、证据和来源结构。 */
+.knowledge-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px}
+.knowledge-grid .panel{min-width:0;padding:28px}
+#knowledge-question{min-height:150px}
+.knowledge-examples{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 24px}
+.knowledge-evidence{padding:20px 0;border-bottom:1px solid #dce5f2;overflow-wrap:anywhere;scroll-margin-top:100px}
+.knowledge-evidence h3{font-size:18px;margin:0 0 10px}
+.knowledge-evidence p{margin:10px 0;line-height:1.7}
+.knowledge-evidence blockquote{margin:12px 0;padding:12px 16px;background:#f5f8fc;border-left:3px solid #8eabd5;font-size:15px;line-height:1.7}
+.knowledge-license{display:block;color:#697f9e;margin-top:8px}
+.knowledge-citations{white-space:nowrap;font-size:14px}
+.knowledge-evidence-title{margin-top:28px}
+.knowledge-claim{line-height:1.8}
+@media(max-width:1000px){.knowledge-grid{grid-template-columns:1fr}.knowledge-grid .panel{padding:22px}}
+@media(max-width:480px){.knowledge-grid .panel{padding:16px}.knowledge-examples .button{white-space:normal;text-align:left}.knowledge-results .section-heading{align-items:flex-start;flex-wrap:wrap;gap:12px}}

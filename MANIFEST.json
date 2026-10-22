@@ -1,70 +1,94 @@
 {
-  "version": "报告质控-公开发布副本-2026-10-21-v0.9",
+  "version": "报告质控-本地候选-2026-10-22-v0.11",
   "status": "allowlisted_snapshot",
   "model_requests_during_build": 0,
   "files": [
     {
       "path": "README.md",
-      "sha256": "574cfcba411f8c15012a5f00ad513731657f91372518be762c1731211ffcb8ed",
-      "bytes": 7149,
+      "sha256": "56c2fe5a4ee91301b4c3cee516f65ddf43e64676ba9c2df947c2fbb60283d778",
+      "bytes": 8707,
       "source": "06_交付与试用/作品展示包源稿/README.md",
-      "source_sha256": "574cfcba411f8c15012a5f00ad513731657f91372518be762c1731211ffcb8ed",
+      "source_sha256": "56c2fe5a4ee91301b4c3cee516f65ddf43e64676ba9c2df947c2fbb60283d778",
       "transform": "exact_copy"
     },
     {
       "path": "LICENSE_STATUS.md",
-      "sha256": "b3203b198d5977cbbc8a20b191a415b6a8b2261321144adfa3e5d6ed5a9a2234",
-      "bytes": 383,
+      "sha256": "dbaaee600f8ac302c54992a64ab796088043e30d1b01aa39adc65580979f64c7",
+      "bytes": 702,
       "source": "06_交付与试用/作品展示包源稿/LICENSE_STATUS.md",
-      "source_sha256": "b3203b198d5977cbbc8a20b191a415b6a8b2261321144adfa3e5d6ed5a9a2234",
+      "source_sha256": "dbaaee600f8ac302c54992a64ab796088043e30d1b01aa39adc65580979f64c7",
       "transform": "exact_copy"
     },
     {
       "path": "docs/PRODUCT_SPEC.md",
-      "sha256": "647c8d90da246a8def8b624777014df7184de3a40b926a142cd653909ea22ddb",
-      "bytes": 3920,
+      "sha256": "8500af75b257c6397a9afc143ee4fd8af3c767625388958f6ec933ec09d8c7a9",
+      "bytes": 4400,
       "source": "06_交付与试用/作品展示包源稿/docs/PRODUCT_SPEC.md",
-      "source_sha256": "647c8d90da246a8def8b624777014df7184de3a40b926a142cd653909ea22ddb",
+      "source_sha256": "8500af75b257c6397a9afc143ee4fd8af3c767625388958f6ec933ec09d8c7a9",
       "transform": "exact_copy"
     },
     {
       "path": "docs/AI_DESIGN.md",
-      "sha256": "89aaba88733e919547bafc18d5f19a80269978d2820b637ee61e8e97aff73743",
-      "bytes": 3645,
+      "sha256": "5f5dc9dd4b916d49f1e9801b9fd1006fa1d9f99d703ae989555969bc13798170",
+      "bytes": 3945,
       "source": "06_交付与试用/作品展示包源稿/docs/AI_DESIGN.md",
-      "source_sha256": "89aaba88733e919547bafc18d5f19a80269978d2820b637ee61e8e97aff73743",
+      "source_sha256": "5f5dc9dd4b916d49f1e9801b9fd1006fa1d9f99d703ae989555969bc13798170",
       "transform": "exact_copy"
     },
     {
       "path": "docs/AI_TECH_DECISIONS.md",
-      "sha256": "24e5f82a9952f953c3216578bb3205823a745ed55905a23a0603591a5c84407c",
-      "bytes": 4826,
+      "sha256": "7c4ed06438d175548058da4743ec4e7f1abb0b82018baa295bbb6d81830339dd",
+      "bytes": 5769,
       "source": "06_交付与试用/作品展示包源稿/docs/AI_TECH_DECISIONS.md",
-      "source_sha256": "24e5f82a9952f953c3216578bb3205823a745ed55905a23a0603591a5c84407c",
+      "source_sha256": "7c4ed06438d175548058da4743ec4e7f1abb0b82018baa295bbb6d81830339dd",
       "transform": "exact_copy"
     },
     {
       "path": "docs/ACCEPTANCE.md",
-      "sha256": "15cbce82302655c169608bce8c18d63067395ae867df3a7b7b6ed799d655f2cc",
-      "bytes": 5293,
+      "sha256": "6d682bab5fafbc9cffb0cf9859db3e7e17d9b6a7df4940bb905aed3d745c15e8",
+      "bytes": 7289,
       "source": "06_交付与试用/作品展示包源稿/docs/ACCEPTANCE.md",
-      "source_sha256": "15cbce82302655c169608bce8c18d63067395ae867df3a7b7b6ed799d655f2cc",
+      "source_sha256": "6d682bab5fafbc9cffb0cf9859db3e7e17d9b6a7df4940bb905aed3d745c15e8",
       "transform": "exact_copy"
     },
     {
       "path": "docs/PROJECT_OVERVIEW.md",
-      "sha256": "2cdd5ecaf06ffde7646db9339444829dbad2e3e56e6ac93e3bc72dad88c98a1f",
-      "bytes": 4126,
+      "sha256": "26e16e2c31fad521173e47582b318c783c4b5b0926e6f8b89bbe1fac30392fda",
+      "bytes": 4250,
       "source": "06_交付与试用/作品展示包源稿/docs/PROJECT_OVERVIEW.md",
-      "source_sha256": "2cdd5ecaf06ffde7646db9339444829dbad2e3e56e6ac93e3bc72dad88c98a1f",
+      "source_sha256": "26e16e2c31fad521173e47582b318c783c4b5b0926e6f8b89bbe1fac30392fda",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "docs/KNOWLEDGE_ASSISTANT.md",
+      "sha256": "a5e4014d4fd64aec0b3c737502f60dd403174b2c2c6c7aaf327435c9cfd6f472",
+      "bytes": 10440,
+      "source": "02_产品定义与设计/04_影像知识助手-RAG与Agent需求与验收-v0.1.md",
+      "source_sha256": "a5e4014d4fd64aec0b3c737502f60dd403174b2c2c6c7aaf327435c9cfd6f472",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/knowledge/corpus.json",
+      "sha256": "f451937085930c8de04435959264a5371ba62ae13cc951c16acd932a9b965d03",
+      "bytes": 5755,
+      "source": "04_研发实现/knowledge/corpus.json",
+      "source_sha256": "f451937085930c8de04435959264a5371ba62ae13cc951c16acd932a9b965d03",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/knowledge/README.md",
+      "sha256": "46463142f48644af376b50ff1a788e3ac09c98bfeb0919c4b235b4fb737a7c7b",
+      "bytes": 1443,
+      "source": "04_研发实现/knowledge/README.md",
+      "source_sha256": "46463142f48644af376b50ff1a788e3ac09c98bfeb0919c4b235b4fb737a7c7b",
       "transform": "exact_copy"
     },
     {
       "path": "app/web_app.py",
-      "sha256": "6783c30ba933adcbc0b73c8695ee839cd2d999573181c537a1225239e04f8507",
-      "bytes": 14979,
+      "sha256": "fa28a0ff9f6cbc5b21dd2512afd146a54e09c003e86e281c36c2ba818e74caca",
+      "bytes": 16175,
       "source": "04_研发实现/web_app.py",
-      "source_sha256": "17ee9dc52b4db686682b930a5c756f9dd7b16ca967928a51de4b578b6a2c011f",
+      "source_sha256": "06f46f9fccbfe856bd6d2adee3219d678b4b18ac96cdea24f6c5a1307f0d44c2",
       "transform": "package_document_routes"
     },
     {
@@ -140,27 +164,35 @@
       "transform": "exact_copy"
     },
     {
+      "path": "app/src/knowledge_assistant.py",
+      "sha256": "aefc7bb757259a77fe77944edf63241f80c985940a03b11403d19c9385da01af",
+      "bytes": 17074,
+      "source": "04_研发实现/src/knowledge_assistant.py",
+      "source_sha256": "aefc7bb757259a77fe77944edf63241f80c985940a03b11403d19c9385da01af",
+      "transform": "exact_copy"
+    },
+    {
       "path": "app/web/index.html",
-      "sha256": "59a75692293cc2af17dafb8fe0c2227aa1efe833f9b4344b259d7c0a374a53e8",
-      "bytes": 12034,
+      "sha256": "49188bcbaa8d6f84978ee479ca2d8cbecc9667f80e06d94752db3d8066989e30",
+      "bytes": 14977,
       "source": "04_研发实现/web/index.html",
-      "source_sha256": "59a75692293cc2af17dafb8fe0c2227aa1efe833f9b4344b259d7c0a374a53e8",
+      "source_sha256": "49188bcbaa8d6f84978ee479ca2d8cbecc9667f80e06d94752db3d8066989e30",
       "transform": "exact_copy"
     },
     {
       "path": "app/web/style.css",
-      "sha256": "571400f11cc10930da2cd8761e6f72cd5c39415534cf5c6a01a7aed140929027",
-      "bytes": 13960,
+      "sha256": "e11cbd5d154acab4db5fe1156bd2cc813595e3c73ce1a0f53dd987d9db8b3ea4",
+      "bytes": 15167,
       "source": "04_研发实现/web/style.css",
-      "source_sha256": "571400f11cc10930da2cd8761e6f72cd5c39415534cf5c6a01a7aed140929027",
+      "source_sha256": "e11cbd5d154acab4db5fe1156bd2cc813595e3c73ce1a0f53dd987d9db8b3ea4",
       "transform": "exact_copy"
     },
     {
       "path": "app/web/app.js",
-      "sha256": "82b912f7f6c24a59451394def927e2d7ec9c25bc209981ea758f78abce3a4f0f",
-      "bytes": 26272,
+      "sha256": "a385fc97dfb4ed7be4b0773b22e4e72b13667f691e1e0abe86acf088a5a01a2e",
+      "bytes": 26382,
       "source": "04_研发实现/web/app.js",
-      "source_sha256": "82b912f7f6c24a59451394def927e2d7ec9c25bc209981ea758f78abce3a4f0f",
+      "source_sha256": "a385fc97dfb4ed7be4b0773b22e4e72b13667f691e1e0abe86acf088a5a01a2e",
       "transform": "exact_copy"
     },
     {
@@ -185,6 +217,14 @@
       "bytes": 8115,
       "source": "04_研发实现/web/review.js",
       "source_sha256": "f176cc9b1fd1d6768b97861adb20427e318e4e16785f17dd3c9985c9f16004d7",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "app/web/knowledge.js",
+      "sha256": "fdbc9e7d353ad34b2556607f455f5529fdcb2ae4cc15a7b5e20d8a6af6b3d971",
+      "bytes": 7248,
+      "source": "04_研发实现/web/knowledge.js",
+      "source_sha256": "fdbc9e7d353ad34b2556607f455f5529fdcb2ae4cc15a7b5e20d8a6af6b3d971",
       "transform": "exact_copy"
     },
     {
@@ -292,6 +332,14 @@
       "transform": "exact_copy"
     },
     {
+      "path": "app/tests/test_knowledge_assistant.py",
+      "sha256": "f857d3a2c30b54ee7c859b2e64f6c5259edc64497949e5623fbc8bb15f7e4323",
+      "bytes": 7374,
+      "source": "04_研发实现/tests/test_knowledge_assistant.py",
+      "source_sha256": "f857d3a2c30b54ee7c859b2e64f6c5259edc64497949e5623fbc8bb15f7e4323",
+      "transform": "exact_copy"
+    },
+    {
       "path": "app/tests/test_review_session.mjs",
       "sha256": "fdeefd7fad16c0ddda55d0f7dce24fa885731e054e213b176c760fb93f0f0a78",
       "bytes": 6926,
@@ -348,6 +396,22 @@
       "transform": "exact_copy"
     },
     {
+      "path": "assets/knowledge-workflow.svg",
+      "sha256": "1dd0129533dcceaf6374e0ded51d65e6d7e27d11824dfe345061634edb9cef06",
+      "bytes": 2926,
+      "source": "03_AI方案与工作流/04_流程图_知识助手RAG与Agent-v0.1.svg",
+      "source_sha256": "1dd0129533dcceaf6374e0ded51d65e6d7e27d11824dfe345061634edb9cef06",
+      "transform": "exact_copy"
+    },
+    {
+      "path": "public_data/knowledge_acceptance.json",
+      "sha256": "86d7335535972ecd74f055771d154f8a2cbbe2f7d14a730741020c61581a8aca",
+      "bytes": 2243,
+      "source": "05_测试与评测/35_知识助手本地功能与受控Agent验证-2026-10-22.json",
+      "source_sha256": "86d7335535972ecd74f055771d154f8a2cbbe2f7d14a730741020c61581a8aca",
+      "transform": "exact_copy"
+    },
+    {
       "path": "public_data/evaluation.json",
       "sha256": "b0d2c78889376da4e9940ad435c9fc565ac002410c01aba3bebf09f9d468d959",
       "bytes": 679,
@@ -357,6 +421,12 @@
       "path": "public_data/model_pilot.json",
       "sha256": "fd84be403011ab945a9d7ebd909b9d742d885b43ee4ee2ba5520a34ca04ebbbc",
       "bytes": 4020,
+      "transform": "generated_safe_field_allowlist"
+    },
+    {
+      "path": "public_data/knowledge_live_acceptance.json",
+      "sha256": "ddd93104ba680f11f406706cfe10fd763d1e60cc460c69f90c81d24d30efc464",
+      "bytes": 3887,
       "transform": "generated_safe_field_allowlist"
     },
     {

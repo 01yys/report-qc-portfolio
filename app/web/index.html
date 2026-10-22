@@ -23,6 +23,7 @@
       <button class="nav-button active" data-view="workspace" aria-current="page"><svg class="icon"><use href="#icon-report"/></svg>检查工作台</button>
       <button class="nav-button" data-view="records"><svg class="icon"><use href="#icon-history"/></svg>案例与记录</button>
       <button class="nav-button" data-view="review"><svg class="icon"><use href="#icon-report"/></svg>复核管理</button>
+      <button class="nav-button" data-view="knowledge"><svg class="icon"><use href="#icon-info"/></svg>知识助手</button>
       <button class="nav-button" data-view="evaluation"><svg class="icon"><use href="#icon-chart"/></svg>评测与说明</button>
       <button class="nav-button" data-view="process"><svg class="icon"><use href="#icon-report"/></svg>产品过程</button>
     </nav>
@@ -81,6 +82,32 @@
           <label for="review-state">反馈状态<select id="review-state"><option value="all">全部状态</option><option value="pending">待核对</option><option value="reviewed">已核对</option><option value="inaccurate">提示不准确</option></select></label></div>
         <p id="review-match-count" class="muted" aria-live="polite"></p><div id="review-list"></div>
       </section>
+      <section id="knowledge-view" class="view" aria-labelledby="knowledge-title" hidden>
+        <div class="knowledge-grid">
+          <section class="panel">
+            <h2 id="knowledge-title">影像知识助手</h2>
+            <p class="muted">查阅专业资料，查看每条回答的出处。当前范围为胸部影像教材选段；文献搜索限定 PubMed。</p>
+            <label class="field-title" for="knowledge-question">你想了解什么</label>
+            <textarea id="knowledge-question" maxlength="1000" rows="5" placeholder="例如：什么是次级肺小叶SPL？" spellcheck="false"></textarea>
+            <div id="knowledge-examples" class="knowledge-examples"></div>
+            <div class="input-actions"><button id="knowledge-search" class="button primary" disabled>查阅教材选段</button><button id="knowledge-pubmed" class="button" disabled>搜索 PubMed 文献</button></div>
+            <p class="muted">教材选段离线可查。PubMed 查询会将检索词发送至 NCBI，仅返回文献目录与原文链接。</p>
+            <details class="coverage"><summary>使用 AI 整理与多步检索</summary>
+              <label for="knowledge-mode" class="field-title">处理方式</label>
+              <select id="knowledge-mode"><option value="rag">依据教材回答（RAG，最多1次模型请求）</option><option value="agent">多步检索助手（Agent，最多2次模型请求）</option></select>
+              <p id="knowledge-capability" class="muted"></p>
+              <label class="ai-consent"><input id="knowledge-consent" type="checkbox">允许本次知识问题发送至模型并计费</label>
+              <button id="knowledge-ai" class="button" disabled>请 AI 查阅与解释</button>
+            </details>
+            <details class="coverage"><summary>资料范围与来源</summary><p id="knowledge-scope"></p><div id="knowledge-sources"></div></details>
+          </section>
+          <section class="panel knowledge-results" aria-labelledby="knowledge-result-title">
+            <div class="section-heading"><h2 id="knowledge-result-title">查阅结果</h2><button id="knowledge-export" class="button small" disabled>导出结果</button></div>
+            <div id="knowledge-result" aria-live="polite"><p class="muted">输入知识问题，或选择左侧示例开始。</p></div>
+          </section>
+        </div>
+        <p class="boundary">本功能用于资料查阅演示，中文摘要由 AI 整理且未经专业医师审核。请核对原文，不输入患者身份信息；个体诊断与治疗请由医师判断。</p>
+      </section>
       <section id="evaluation-view" class="view panel secondary-panel" aria-labelledby="evaluation-title" hidden>
         <h2 id="evaluation-title">评测与说明</h2>
         <p class="muted">以下数据来自项目实际合成评测文件，不是医院效果或临床准确率。</p>
@@ -101,7 +128,7 @@
         <div class="process-row"><h3>01 问题与用户任务</h3><p>围绕影像报告提交前自检，对比两段文本，定位可能不一致的表达并交由人工核对。场景来源为行业接触与工作流观察，尚未开展正式医生访谈或临床价值验证。</p></div>
         <div class="process-row"><h3>02 范围与优先级</h3><p>先验证左右检查，再扩展侧别与明确部位、单值尺寸与单位、明确肯否三类规则，补齐修改复检、反馈和导出。复杂语义由可选 AI 提出候选，范围保持在文本一致性。</p></div>
         <div class="process-row"><h3>03 工作流与交互设计</h3><p>定义输入、输出、检查范围和异常状态，再形成双文本输入、证据查看、人工修改、复检和结果管理流程。无提示、无法比较、AI 未执行与执行失败分别呈现。</p><a href="/assets/check-workflow.svg" target="_blank" rel="noopener">查看早期人工复核流程图</a><p class="muted">图中模型状态为历史设计，当前方案见规则与 AI 说明。</p></div>
-        <div class="process-row"><h3>04 规则与模型实现</h3><p>规则先返回结果，AI 由使用者主动追加。模型候选经过结构与原文证据校验，再按类别和证据区间保守融合；模型失败时保留规则结果。完整 RAG 与自主 Agent 未实现。</p></div>
+        <div class="process-row"><h3>04 规则与模型实现</h3><p>规则先返回结果，AI由使用者主动追加。知识助手单独提供教材选段检索、限定PubMed文献查询、基于引用的RAG回答与最多一次重查的Agent流程。真实模型需要本机配置与有效额度；当前资料范围和验证状态可在知识助手查看。</p><a href="/assets/knowledge-workflow.svg" target="_blank" rel="noopener">查看知识助手 RAG 与 Agent 工作流</a></div>
         <div class="process-row"><h3>05 验证与迭代</h3><p>采用冻结合成案例、自动化检查、真实模型开发对照和模拟页面验证。两例网页真实请求中，数量案例检出候选但分类错误，随后采用“类别待核对”策略，保留原始失败与分类信息。</p><p class="muted">合成预期和技术检查不构成临床准确率；外部独立评测仍待开展。</p></div>
         <div class="process-row"><h3>06 版本交付</h3><p>代码、需求与设计、流程图、合成案例和验证说明已整理为独立公开仓库，核对构建清单与远端提交后发布。</p><a href="https://github.com/01yys/report-qc-portfolio" target="_blank" rel="noopener">GitHub 项目仓库</a><p class="muted">当前支持本机运行，未提供公网应用托管或医院部署。</p></div>
       </section>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="660" viewBox="0 0 1320 660">
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="#526b8a"/></marker></defs>
+<rect width="1320" height="660" fill="white"/>
+<g font-family="Arial Unicode MS,PingFang SC,sans-serif" fill="#17345a">
+<text x="45" y="54" font-size="30" font-weight="bold">影像知识助手 RAG 与 Agent 工作流</text>
+<text x="45" y="88" font-size="18">教材检索可离线使用　RAG最多1次模型请求　Agent最多2次模型请求</text>
+<g fill="#f4f7fc" stroke="#9bb2d2" stroke-width="1.5">
+<rect x="45" y="135" width="185" height="95" rx="6"/><rect x="285" y="135" width="215" height="95" rx="6"/>
+<rect x="555" y="135" width="220" height="95" rx="6"/><rect x="830" y="135" width="195" height="95" rx="6"/>
+<rect x="1080" y="135" width="195" height="95" rx="6"/>
+<rect x="285" y="340" width="240" height="105" rx="6"/><rect x="580" y="340" width="240" height="105" rx="6"/>
+<rect x="875" y="340" width="340" height="105" rx="6"/>
+</g>
+<g font-size="21" text-anchor="middle" font-weight="bold">
+<text x="137" y="175">知识问题</text><text x="392" y="175">专业资料检索</text><text x="665" y="175">RAG 或 Agent</text>
+<text x="927" y="175">引用与动作校验</text><text x="1177" y="175">回答与证据展示</text>
+<text x="405" y="380">再次检索教材</text><text x="700" y="380">查询 PubMed</text><text x="1045" y="380">澄清或停止</text>
+</g>
+<g font-size="17" text-anchor="middle">
+<text x="137" y="205">个体诊疗问题转人工</text><text x="392" y="205">2篇教材章节 7个选段</text>
+<text x="665" y="205">模型根据证据选择动作</text><text x="927" y="205">仅允许本次片段ID</text><text x="1177" y="205">原文 章节 日期 链接</text>
+<text x="405" y="410">最多一次改写补查</text><text x="700" y="410">仅文献目录 不生成医学结论</text><text x="1045" y="410">无依据 含糊 超时 越权 超步骤</text>
+</g>
+<g stroke="#526b8a" stroke-width="2" fill="none" marker-end="url(#a)">
+<path d="M230 182H280"/><path d="M500 182H550"/><path d="M775 182H825"/><path d="M1025 182H1075"/>
+<path d="M625 230V275H405V335"/><path d="M665 230V335"/><path d="M730 230V275H1045V335"/>
+<path d="M405 445V485H535V205H550"/>
+</g>
+<g font-size="16"><text x="790" y="164">回答</text><text x="800" y="265">Agent可选动作</text><text x="55" y="540">资料治理：保留作者、出版社、版本、原文、许可与摘要改动说明；英文为教材摘录，中文为AI整理。</text>
+<text x="55" y="576">费用与运行：默认无模型调用；本机隐藏配置Key，按当天批次预留请求；失败不自动重试。</text>
+<text x="55" y="612">验证边界：真实DeepSeek已验一例RAG回答和一例Agent工具路由；样本有限，未经影像专家审核与外部试用。</text></g>
+</g></svg>

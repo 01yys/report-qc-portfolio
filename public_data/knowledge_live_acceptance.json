@@ -1,0 +1,108 @@
+{
+  "checked_on": "2026-10-22",
+  "provider": "DeepSeek",
+  "model": "deepseek-flash",
+  "assistant_version": "imaging-knowledge-2026-10-22-v1",
+  "batch": {
+    "authorized_max_model_requests": 3,
+    "reserved_model_requests": 3,
+    "automatic_retries": 0,
+    "max_output_tokens_each": 1200
+  },
+  "aggregate_usage": {
+    "prompt_tokens": 1297,
+    "completion_tokens": 174,
+    "total_tokens": 1471
+  },
+  "attempts": [
+    {
+      "sequence": 1,
+      "mode": "rag",
+      "status": "failed",
+      "usage": {
+        "prompt_tokens": 415,
+        "completion_tokens": 92,
+        "total_tokens": 507
+      },
+      "product_response": "失败关闭：不显示未经校验的回答。",
+      "reason": "模型输出的动作结构、字段或引用未通过本地校验；未展示回答，未自动重试。原始模型动作未持久化，无法进一步定位是具体哪一字段不符合约定。"
+    },
+    {
+      "sequence": 2,
+      "mode": "rag",
+      "status": "answered",
+      "usage": {
+        "prompt_tokens": 426,
+        "completion_tokens": 63,
+        "total_tokens": 489
+      },
+      "product_response": "返回回答与K4出处；页面提示医学解释仍需专业核对。",
+      "evidence": [
+        {
+          "id": "K4",
+          "title": "什么是次级肺小叶 SPL",
+          "quote": "The SPL is the smallest functional unit of the lung visible on CT. Each bronchiole enters the center of the SPL alongside a pulmonary arterial branch."
+        }
+      ],
+      "claims": [
+        {
+          "text": "次级肺小叶（SPL）是CT上可见的肺最小功能单位。",
+          "citations": [
+            "K4"
+          ]
+        },
+        {
+          "text": "细支气管与肺动脉分支一起进入小叶中心，小叶间隔位于周边。",
+          "citations": [
+            "K4"
+          ]
+        }
+      ],
+      "trace": [
+        "search_library",
+        "answer"
+      ]
+    },
+    {
+      "sequence": 3,
+      "mode": "agent",
+      "status": "literature_found",
+      "usage": {
+        "prompt_tokens": 456,
+        "completion_tokens": 19,
+        "total_tokens": 475
+      },
+      "product_response": "Agent选择白名单内的PubMed目录查询，返回2条书目信息及原始链接；提示索引收录不等于证据质量或全文授权。",
+      "trace": [
+        "search_library",
+        "search_pubmed_model_action",
+        "search_pubmed_ncbi"
+      ],
+      "tool_action": "search_pubmed",
+      "query": "pulmonary micronodules CT MIP",
+      "literature_results": [
+        {
+          "pmid": "8685322",
+          "title": "Diffuse infiltrative lung disease: clinical value of sliding-thin-slab maximum intensity projection CT scans in the detection of mild micronodular patterns.",
+          "journal": "Radiology",
+          "published": "1996 Aug",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/8685322/"
+        },
+        {
+          "pmid": "16284140",
+          "title": "Multi-detector row CT and postprocessing techniques in the assessment of diffuse lung disease.",
+          "journal": "Radiographics : a review publication of the Radiological Society of North America, Inc",
+          "published": "2005 Nov-Dec",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16284140/"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "一次RAG成功只能证明该合成问题的端到端链路，不代表稳定性、医学准确率或临床有效性。",
+    "系统目前校验引用ID存在，不足以证明每条中文主张都被引用原文充分支持。",
+    "教材中文摘要及模型回答均未经影像科专家审核。",
+    "PubMed结果只验证书目检索连通与Agent动作路由，不评价文献质量，不代表获取了全文。",
+    "首笔失败记录未保存原始动作内容，后续应改进脱敏诊断信息，避免盲目重试。"
+  ]
+}
